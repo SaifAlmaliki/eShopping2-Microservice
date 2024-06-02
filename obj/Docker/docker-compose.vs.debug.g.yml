@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  yarp.apigateway:
+    image: yarpapigateway:dev
+    container_name: "Yarp.ApiGateway_1"
+    build:
+      args:
+        BUILD_CONFIGURATION: Debug
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Yarp.ApiGateway"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - C:\Users\DE121166\Desktop\eShopping2-Microservice\ApiGateway\Yarp.ApiGateway:/app:rw
+      - C:\Users\DE121166\Desktop\eShopping2-Microservice:/src:rw
+      - C:\Users\DE121166\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\DE121166\.nuget\packages:/.nuget/packages:ro
+      - C:\Users\DE121166\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\DE121166\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\DE121166\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\DE121166\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+
+    entrypoint: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --wait"
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/bin/Debug/net8.0/Yarp.ApiGateway.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet"
+    tty: true

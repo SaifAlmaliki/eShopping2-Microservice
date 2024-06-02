@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Yarp.ApiGateway.props" />
+</Project>

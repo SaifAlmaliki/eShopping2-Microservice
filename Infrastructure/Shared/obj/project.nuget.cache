@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "fprfj0HFoq0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\Shared\\Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DE121166\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.1\\fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.1.2\\microsoft.extensions.caching.abstractions.2.1.2.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.caching.memory\\2.1.23\\microsoft.extensions.caching.memory.2.1.23.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.configuration\\2.1.1\\microsoft.extensions.configuration.2.1.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.1.1\\microsoft.extensions.configuration.abstractions.2.1.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.configuration.binder\\2.1.10\\microsoft.extensions.configuration.binder.2.1.10.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.logging\\2.1.1\\microsoft.extensions.logging.2.1.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.1.1\\microsoft.extensions.logging.abstractions.2.1.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.options\\2.1.1\\microsoft.extensions.options.2.1.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.extensions.primitives\\2.1.1\\microsoft.extensions.primitives.2.1.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.featuremanagement\\3.3.1\\microsoft.featuremanagement.3.3.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\microsoft.featuremanagement.aspnetcore\\3.3.1\\microsoft.featuremanagement.aspnetcore.3.3.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\DE121166\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}
