@@ -1,0 +1,102 @@
+﻿@page "/cart"
+@inject IBasketService BasketService
+@inject ILogger<Cart> Logger
+
+@code {
+    private ShoppingCartModel cart = new ShoppingCartModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        cart = await BasketService.LoadUserBasket();
+    }
+
+    private async Task RemoveFromCart(Guid productId)
+    {
+        Logger.LogInformation("Remove from cart button clicked");
+        cart.Items.RemoveAll(x => x.ProductId == productId);
+        await BasketService.StoreBasket(new StoreBasketRequest(cart));
+        cart = await BasketService.LoadUserBasket(); // Refresh the cart
+    }
+
+    public class ShoppingCartModel
+    {
+        public List<CartItemModel> Items { get; set; } = new List<CartItemModel>();
+        public decimal TotalPrice { get; set; }
+    }
+
+    public class CartItemModel
+    {
+        public Guid ProductId { get; set; }
+        public string ProductName { get; set; }
+        public int Quantity { get; set; }
+        public decimal Price { get; set; }
+    }
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><NavLink href="/">Home</NavLink></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Available</th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-right">Price</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cartItem in cart.Items)
+                        {
+                            <tr>
+                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /></td>
+                                <td>@cartItem.ProductName</td>
+                                <td>In stock</td>
+                                <td><input class="form-control" type="text" value="@cartItem.Quantity" /></td>
+                                <td class="text-right">@((cartItem.Price * cartItem.Quantity).ToString("C"))</td>
+                                <td class="text-right">
+                                    <button class="btn btn-sm btn-danger" @onclick="() => RemoveFromCart(cartItem.ProductId)"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        }
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>@(cart.TotalPrice.ToString("C"))</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <NavLink href="/product" class="btn btn-lg btn-block btn-success">Continue Shopping</NavLink>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <NavLink href="/checkout" class="btn btn-lg btn-block btn-danger text-uppercase">CheckOut</NavLink>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -31,27 +31,24 @@ public interface IBasketService
     // Loads the user's basket, creating a new one if it does not exist
     public async Task<ShoppingCartModel> LoadUserBasket()
     {
-        // Default username for the basket
+        // Get Basket If Not Exist Create New Basket with Default Logged In User Name: swn
         var userName = "swn";
         ShoppingCartModel basket;
 
         try
         {
-            // Attempt to get the basket for the user
             var getBasketResponse = await GetBasket(userName);
             basket = getBasketResponse.Cart;
         }
         catch (ApiException apiException) when (apiException.StatusCode == HttpStatusCode.NotFound)
         {
-            // If the basket does not exist, create a new one with default values
             basket = new ShoppingCartModel
             {
                 UserName = userName,
-                Items = new List<ShoppingCartItemModel>()
+                Items = []
             };
         }
 
-        // Return the existing or newly created basket
         return basket;
     }
 }

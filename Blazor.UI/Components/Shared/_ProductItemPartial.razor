@@ -1,0 +1,30 @@
+﻿@code {
+    [Parameter]
+    public ProductModel Product { get; set; }
+
+    [Parameter]
+    public EventCallback<Guid> OnAddToCart { get; set; }
+
+    private async Task AddToCart()
+    {
+        await OnAddToCart.InvokeAsync(Product.Id);
+    }
+}
+
+<div class="card">
+    <a href="/productdetail/@Product.Id"><img class="card-img-top" src="images/product/@Product.ImageFile" alt=""></a>
+    <div class="card-body">
+        <h4 class="card-title">
+            <a href="/productdetail/@Product.Id" class="color-main">@Product.Name</a>
+        </h4>
+        <p class="card-text">@Product.Description</p>
+        <div class="row">
+            <div class="col">
+                <p class="btn btn-danger btn-block">@Product.Price $</p>
+            </div>
+            <div class="col">
+                <button class="btn btn-success btn-block" @onclick="AddToCart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

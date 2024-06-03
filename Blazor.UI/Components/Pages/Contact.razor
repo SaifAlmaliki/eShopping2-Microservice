@@ -1,0 +1,95 @@
+﻿@page "/contact"
+@using Microsoft.AspNetCore.Components.Forms
+@using System.ComponentModel.DataAnnotations
+@page "/contact"
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">E-COMMERCE CONTACT</h1>
+        <p class="lead text-muted mb-0">Contact Page build with Bootstrap 4 !</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <i class="fa fa-envelope"></i> Contact us.
+                </div>
+                <div class="card-body">
+                    <EditForm Model="@contactModel" OnValidSubmit="HandleValidSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <InputText id="name" class="form-control" @bind-Value="@contactModel.Name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <InputText id="email" type="email" class="form-control" @bind-Value="@contactModel.Email" required />
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <InputTextArea id="message" class="form-control" @bind-Value="@contactModel.Message" rows="6" required />
+                        </div>
+                        <div class="mx-auto">
+                            <button type="submit" class="btn btn-primary text-right">Submit</button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header bg-success text-white text-uppercase"><i class="fa fa-home"></i> Address</div>
+                <div class="card-body">
+                    <p>3 rue des Champs Elysées</p>
+                    <p>75008 PARIS</p>
+                    <p>France</p>
+                    <p>Email : email@example.com</p>
+                    <p>Tel. +33 12 56 11 51 84</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private ContactModel contactModel = new ContactModel();
+
+    private void HandleValidSubmit()
+    {
+        // Handle the form submission
+        Console.WriteLine("Form submitted!");
+        Console.WriteLine($"Name: {contactModel.Name}");
+        Console.WriteLine($"Email: {contactModel.Email}");
+        Console.WriteLine($"Message: {contactModel.Message}");
+    }
+
+    public class ContactModel
+    {
+        [Required]
+        public string Name { get; set; }
+        [Required, EmailAddress]
+        public string Email { get; set; }
+        [Required]
+        public string Message { get; set; }
+    }
+}

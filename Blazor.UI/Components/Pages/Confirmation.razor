@@ -1,0 +1,42 @@
+﻿@page "/confirmation"
+@inject NavigationManager Navigation
+
+<div class="container contact-container">
+    <h1 class="mt-4 mb-3">
+        Confirmation
+    </h1>
+    <hr />
+    @if (!string.IsNullOrEmpty(Message))
+    {
+        <h3>@Message</h3>
+    }
+    <br />
+    <p>If you have any further questions, you can contact us 501-222-2222.</p>
+</div>
+
+@code {
+    public string Message { get; set; } = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
+        if (uri.AbsolutePath.EndsWith("/contact"))
+        {
+            OnGetContact();
+        }
+        else if (uri.AbsolutePath.EndsWith("/ordersubmitted"))
+        {
+            OnGetOrderSubmitted();
+        }
+    }
+
+    public void OnGetContact()
+    {
+        Message = "Your email was sent.";
+    }
+
+    public void OnGetOrderSubmitted()
+    {
+        Message = "Your order submitted successfully.";
+    }
+}

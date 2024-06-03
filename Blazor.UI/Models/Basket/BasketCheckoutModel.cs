@@ -1,71 +1,28 @@
 ﻿namespace Blazor.UI.Models.Basket;
 
-// Represents the model used for the checkout process of the shopping basket
 public class BasketCheckoutModel
 {
-    // Constructor to initialize required fields
-    public BasketCheckoutModel(
-        string userName,
-        Guid customerId,
-        decimal totalPrice,
-        string firstName,
-        string lastName,
-        string emailAddress,
-        string addressLine,
-        string country,
-        string state,
-        string zipCode,
-        string cardName,
-        string cardNumber,
-        string expiration,
-        string cvv,
-        int paymentMethod)
-    {
-        UserName = userName;
-        CustomerId = customerId;
-        TotalPrice = totalPrice;
-        FirstName = firstName;
-        LastName = lastName;
-        EmailAddress = emailAddress;
-        AddressLine = addressLine;
-        Country = country;
-        State = state;
-        ZipCode = zipCode;
-        CardName = cardName;
-        CardNumber = cardNumber;
-        Expiration = expiration;
-        CVV = cvv;
-        PaymentMethod = paymentMethod;
-    }
+    public string UserName { get; set; } = default!;
+    public Guid CustomerId { get; set; } = default!;
+    public decimal TotalPrice { get; set; } = default!;
 
-    // The username of the customer checking out
-    public string UserName { get; }
+    // Shipping and BillingAddress
+    public string FirstName { get; set; } = default!;
+    public string LastName { get; set; } = default!;
+    public string EmailAddress { get; set; } = default!;
+    public string AddressLine { get; set; } = default!;
+    public string Country { get; set; } = default!;
+    public string State { get; set; } = default!;
+    public string ZipCode { get; set; } = default!;
 
-    // The unique identifier of the customer
-    public Guid CustomerId { get; }
-
-    // The total price of the items in the basket
-    public decimal TotalPrice { get; }
-
-    // Shipping and Billing Address Information
-    public string FirstName { get; }
-    public string LastName { get; }
-    public string EmailAddress { get; }
-    public string AddressLine { get; }
-    public string Country { get; }
-    public string State { get; }
-    public string ZipCode { get; }
-
-    // Payment Information
-    public string CardName { get; }
-    public string CardNumber { get; }
-    public string Expiration { get; }
-    public string CVV { get; }
-
-    // The payment method selected by the customer
-    public int PaymentMethod { get; }
+    // Payment
+    public string CardName { get; set; } = default!;
+    public string CardNumber { get; set; } = default!;
+    public string Expiration { get; set; } = default!;
+    public string CVV { get; set; } = default!;
+    public int PaymentMethod { get; set; } = default!;
 }
 
-// wrapper classes represent responses from an API
+// wrapper classes
 public record CheckoutBasketRequest(BasketCheckoutModel BasketCheckoutDto);
 public record CheckoutBasketResponse(bool IsSuccess);

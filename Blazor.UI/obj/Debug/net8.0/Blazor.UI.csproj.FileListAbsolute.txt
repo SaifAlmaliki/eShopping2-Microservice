@@ -96,3 +96,13 @@ C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\obj\Debug\net8.0\refint\Blazor.UI
 C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\obj\Debug\net8.0\Blazor.UI.pdb
 C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\obj\Debug\net8.0\Blazor.UI.genruntimeconfig.cache
 C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\obj\Debug\net8.0\ref\Blazor.UI.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Syncfusion.Blazor.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Syncfusion.Blazor.Charts.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Syncfusion.Blazor.Core.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Syncfusion.Blazor.Data.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Syncfusion.Blazor.DataVizCommon.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Syncfusion.Blazor.Layouts.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Syncfusion.ExcelExport.Net.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Syncfusion.Licensing.dll
+C:\Users\DE121166\Desktop\eShopping2\Blazor.UI\bin\Debug\net8.0\Syncfusion.PdfExport.Net.dll

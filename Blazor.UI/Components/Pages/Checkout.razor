@@ -1,0 +1,222 @@
+﻿@page "/checkout"
+@inject IBasketService BasketService
+@inject ILogger<Checkout> Logger
+@using Blazor.UI.Models
+
+@code {
+    private ShoppingCartModel cart = new ShoppingCartModel();
+    private BasketCheckoutModel order = new BasketCheckoutModel();
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        cart = await BasketService.LoadUserBasket();
+    }
+
+    private async Task CheckOutAsync()
+    {
+        Logger.LogInformation("Checkout button clicked");
+
+        cart = await BasketService.LoadUserBasket();
+
+        if (!ValidateOrder())
+        {
+            return;
+        }
+
+        // assumption customerId is passed in from the UI authenticated user swn        
+        order.CustomerId = new Guid("58c49479-ec65-4de2-86e7-033c546291aa");
+        order.UserName = cart.UserName;
+        order.TotalPrice = cart.TotalPrice;
+
+        await BasketService.CheckoutBasket(new CheckoutBasketRequest(order));
+
+        // Redirect to confirmation page
+        NavigationManager.NavigateTo("/confirmation/OrderSubmitted");
+    }
+
+    private bool ValidateOrder()
+    {
+        // Add your validation logic here
+        // Return false if validation fails
+        return true;
+    }
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><NavLink href="/">Home</NavLink></li>
+                    <li class="breadcrumb-item"><NavLink href="/cart">Cart</NavLink></li>
+                    <li class="breadcrumb-item active" aria-current="page">CheckOut</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Your cart</span>
+                <span class="badge badge-secondary badge-pill">@cart.Items.Count</span>
+            </h4>
+            <ul class="list-group mb-3">
+                @foreach (var item in cart.Items)
+                {
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">@item.ProductName</h6>
+                            <small class="text-muted">@item.ProductName</small>
+                        </div>
+                        <span class="text-muted">$@item.Price</span>
+                    </li>
+                }
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Total (USD)</span>
+                    <strong>$@cart.TotalPrice</strong>
+                </li>
+            </ul>
+
+            <form class="card p-2">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Promo code">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary">Redeem</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Billing address</h4>
+            <EditForm Model="@order" OnValidSubmit="CheckOutAsync" class="needs-validation" novalidate>
+                <DataAnnotationsValidator />
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First name</label>
+                        <InputText id="firstName" class="form-control" @bind-Value="order.FirstName" required />
+                        <ValidationMessage For="@(() => order.FirstName)" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last name</label>
+                        <InputText id="lastName" class="form-control" @bind-Value="order.LastName" required />
+                        <ValidationMessage For="@(() => order.LastName)" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="username">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">@</span>
+                        </div>
+                        <InputText id="username" class="form-control" @bind-Value="order.UserName" required />
+                        <ValidationMessage For="@(() => order.UserName)" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                    <InputText id="email" class="form-control" @bind-Value="order.EmailAddress" type="email" />
+                    <ValidationMessage For="@(() => order.EmailAddress)" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="address">Address</label>
+                    <InputText id="address" class="form-control" @bind-Value="order.AddressLine" required />
+                    <ValidationMessage For="@(() => order.AddressLine)" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                    <InputText id="address2" class="form-control" />
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label for="country">Country</label>
+                        <InputSelect id="country" class="custom-select d-block w-100" @bind-Value="order.Country" required>
+                            <option value="">Choose...</option>
+                            <option>United States</option>
+                        </InputSelect>
+                        <ValidationMessage For="@(() => order.Country)" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="state">State</label>
+                        <InputSelect id="state" class="custom-select d-block w-100" @bind-Value="order.State" required>
+                            <option value="">Choose...</option>
+                            <option>California</option>
+                        </InputSelect>
+                        <ValidationMessage For="@(() => order.State)" />
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="zip">Zip</label>
+                        <InputText id="zip" class="form-control" @bind-Value="order.ZipCode" required />
+                        <ValidationMessage For="@(() => order.ZipCode)" />
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <div class="custom-control custom-checkbox">
+                    <InputCheckbox id="same-address" class="custom-control-input" />
+                    <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <InputCheckbox id="save-info" class="custom-control-input" />
+                    <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                </div>
+                <hr class="mb-4">
+
+                <h4 class="mb-3">Payment</h4>
+
+                <div class="d-block my-3">
+                    <InputRadioGroup @bind-Value="order.PaymentMethod">
+                        <div class="custom-control custom-radio">
+                            <InputRadio id="credit" class="custom-control-input" Value="Credit" />
+                            <label class="custom-control-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <InputRadio id="debit" class="custom-control-input" Value="Debit" />
+                            <label class="custom-control-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <InputRadio id="paypal" class="custom-control-input" Value="Paypal" />
+                            <label class="custom-control-label" for="paypal">Paypal</label>
+                        </div>
+                    </InputRadioGroup>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="cc-name">Name on card</label>
+                        <InputText id="cc-name" class="form-control" @bind-Value="order.CardName" required />
+                        <small class="text-muted">Full name as displayed on card</small>
+                        <ValidationMessage For="@(() => order.CardName)" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cc-number">Credit card number</label>
+                        <InputText id="cc-number" class="form-control" @bind-Value="order.CardNumber" required />
+                        <ValidationMessage For="@(() => order.CardNumber)" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-expiration">Expiration</label>
+                        <InputText id="cc-expiration" class="form-control" @bind-Value="order.Expiration" required />
+                        <ValidationMessage For="@(() => order.Expiration)" />
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-cvv">CVV</label>
+                        <InputText id="cc-cvv" class="form-control" @bind-Value="order.CVV" required />
+                        <ValidationMessage For="@(() => order.CVV)" />
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Checkout Order</button>
+            </EditForm>
+        </div>
+    </div>
+</div>
