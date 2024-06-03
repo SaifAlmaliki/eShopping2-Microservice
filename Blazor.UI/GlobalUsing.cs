@@ -5,4 +5,3 @@ global using System.Net;
 global using Refit;
 global using Blazor.UI.Components;
 global using Blazor.UI.Services;
-global using System.Net.NetworkInformation;

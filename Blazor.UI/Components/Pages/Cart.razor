@@ -1,4 +1,5 @@
 ﻿@page "/cart"
+@using Blazor.UI.Models.Basket
 @inject IBasketService BasketService
 @inject ILogger<Cart> Logger
 
@@ -16,20 +17,6 @@
         cart.Items.RemoveAll(x => x.ProductId == productId);
         await BasketService.StoreBasket(new StoreBasketRequest(cart));
         cart = await BasketService.LoadUserBasket(); // Refresh the cart
-    }
-
-    public class ShoppingCartModel
-    {
-        public List<CartItemModel> Items { get; set; } = new List<CartItemModel>();
-        public decimal TotalPrice { get; set; }
-    }
-
-    public class CartItemModel
-    {
-        public Guid ProductId { get; set; }
-        public string ProductName { get; set; }
-        public int Quantity { get; set; }
-        public decimal Price { get; set; }
     }
 }
 

@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Yarp.ApiGateway.props" />
-</Project>

@@ -1,0 +1,12 @@
+﻿@inject IJSRuntime JSRuntime
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("eval", "var script1 = document.createElement('script'); script1.src = '/lib/jquery-validation/dist/jquery.validate.min.js'; document.head.appendChild(script1);");
+            await JSRuntime.InvokeVoidAsync("eval", "var script2 = document.createElement('script'); script2.src = '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'; document.head.appendChild(script2);");
+        }
+    }
+}

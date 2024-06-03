@@ -1,4 +1,6 @@
-﻿namespace Blazor.UI.Models.Basket;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Blazor.UI.Models.Basket;
 
 public class BasketCheckoutModel
 {
@@ -7,8 +9,12 @@ public class BasketCheckoutModel
     public decimal TotalPrice { get; set; } = default!;
 
     // Shipping and BillingAddress
+    [Required]
     public string FirstName { get; set; } = default!;
+    [Required]
     public string LastName { get; set; } = default!;
+    
+    [EmailAddress]
     public string EmailAddress { get; set; } = default!;
     public string AddressLine { get; set; } = default!;
     public string Country { get; set; } = default!;

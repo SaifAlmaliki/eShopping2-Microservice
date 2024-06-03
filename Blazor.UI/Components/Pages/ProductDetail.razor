@@ -1,0 +1,165 @@
+@page "/productdetail/{productId:guid}"
+@inject ICatalogService CatalogService
+@inject IBasketService BasketService
+@inject ILogger<ProductDetail> Logger
+@inject NavigationManager NavigationManager
+@using Microsoft.AspNetCore.Components.Web
+
+<Title>ProductDetail</Title>
+
+@code {
+    [Parameter]
+    public Guid ProductId { get; set; }
+
+    private ProductModel Product { get; set; } = new ProductModel();
+    private string Color { get; set; } = "Black";
+    private int Quantity { get; set; } = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await CatalogService.GetProduct(ProductId);
+        Product = response.Product;
+    }
+
+    private async Task AddToCart()
+    {
+        Logger.LogInformation("Add to cart button clicked");
+        var productResponse = await CatalogService.GetProduct(ProductId);
+
+        var basket = await BasketService.LoadUserBasket();
+
+        basket.Items.Add(new ShoppingCartItemModel
+        {
+            ProductId = ProductId,
+            ProductName = productResponse.Product.Name,
+            Price = productResponse.Product.Price,
+            Quantity = Quantity,
+            Color = Color
+        });
+
+        await BasketService.StoreBasket(new StoreBasketRequest(basket));
+
+        // Redirect to the cart page
+        NavigationManager.NavigateTo("/cart");
+    }
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/product">Product</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@Product.Name</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Image -->
+        <div class="col-12 col-lg-6">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <a href="" data-toggle="modal" data-target="#productModal">
+                        <img class="img-fluid" src="~/images/product/@Product.ImageFile.Replace('-','x')" />
+                        <p class="text-center">@Product.Name</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add to cart -->
+        <div class="col-12 col-lg-6 add_to_cart_block">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <p class="price">@Product.Price $</p>
+                    <p class="price_discounted">@(Product.Price + 120) $</p>
+                    <div class="form-group">
+                        <label for="colors">Color</label>
+                        <select @bind="Color" class="custom-select" id="colors">
+                            <option selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Red">Red</option>
+                            <option value="Green">Green</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity :</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <button type="button" class="quantity-left-minus btn btn-danger btn-number" @onclick="DecreaseQuantity">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control" id="quantity" name="quantity" min="1" max="100" @bind="Quantity">
+                            <div class="input-group-append">
+                                <button type="button" class="quantity-right-plus btn btn-success btn-number" @onclick="IncreaseQuantity">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success btn-lg btn-block text-uppercase" @onclick="AddToCart">
+                        <i class="fa fa-shopping-cart"></i> Add To Cart
+                    </button>
+                    <div class="product_rassurance">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-truck fa-2x"></i><br />Fast delivery</li>
+                            <li class="list-inline-item"><i class="fa fa-credit-card fa-2x"></i><br />Secure payment</li>
+                            <li class="list-inline-item"><i class="fa fa-phone fa-2x"></i><br />+33 1 22 54 65 60</li>
+                        </ul>
+                    </div>
+                    <div class="reviews_product p-3 mb-2 ">
+                        3 reviews
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        (4/5)
+                        <a class="pull-right" href="#reviews">View all reviews</a>
+                    </div>
+                    <div class="datasheet p-3 mb-2 bg-info text-white">
+                        <a href="" class="text-white"><i class="fa fa-file-text"></i> Download DataSheet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Description -->
+        <div class="col-12">
+            <div class="card border-light mb-3">
+                <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-align-justify"></i> Description</div>
+                <div class="card-body">
+                    <p class="card-text">
+                        @Product.Description
+                    </p>
+                    <p class="card-text">
+                        @Product.Description
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private void DecreaseQuantity()
+    {
+        if (Quantity > 1)
+        {
+            Quantity--;
+        }
+    }
+
+    private void IncreaseQuantity()
+    {
+        Quantity++;
+    }
+}

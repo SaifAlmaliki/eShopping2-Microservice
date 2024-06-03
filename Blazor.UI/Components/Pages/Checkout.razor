@@ -6,6 +6,7 @@
 @code {
     private ShoppingCartModel cart = new ShoppingCartModel();
     private BasketCheckoutModel order = new BasketCheckoutModel();
+
     [Inject]
     private NavigationManager NavigationManager { get; set; }
 
@@ -25,7 +26,7 @@
             return;
         }
 
-        // assumption customerId is passed in from the UI authenticated user swn        
+        // assumption customerId is passed in from the UI authenticated user swn
         order.CustomerId = new Guid("58c49479-ec65-4de2-86e7-033c546291aa");
         order.UserName = cart.UserName;
         order.TotalPrice = cart.TotalPrice;
@@ -112,7 +113,7 @@
                     <label for="username">Username</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">@</span>
+                            <span class="input-group-text">Hello Fr</span>
                         </div>
                         <InputText id="username" class="form-control" @bind-Value="order.UserName" required />
                         <ValidationMessage For="@(() => order.UserName)" />
@@ -175,15 +176,15 @@
                 <div class="d-block my-3">
                     <InputRadioGroup @bind-Value="order.PaymentMethod">
                         <div class="custom-control custom-radio">
-                            <InputRadio id="credit" class="custom-control-input" Value="Credit" />
+                            <InputRadio id="credit" class="custom-control-input" Value="1" />
                             <label class="custom-control-label" for="credit">Credit card</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <InputRadio id="debit" class="custom-control-input" Value="Debit" />
+                            <InputRadio id="debit" class="custom-control-input" Value="2" />
                             <label class="custom-control-label" for="debit">Debit card</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <InputRadio id="paypal" class="custom-control-input" Value="Paypal" />
+                            <InputRadio id="paypal" class="custom-control-input" Value="3" />
                             <label class="custom-control-label" for="paypal">Paypal</label>
                         </div>
                     </InputRadioGroup>
