@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\Shared\\Shared.csproj": {}
+    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Infrastructure\\Shared\\Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\Shared\\Shared.csproj": {
+    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Infrastructure\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Infrastructure\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Infrastructure\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Infrastructure\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Client\\Blazor.UI\\Blazor.UI.csproj": {}
+    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Client\\Blazor.UI\\Blazor.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Client\\Blazor.UI\\Blazor.UI.csproj": {
+    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Client\\Blazor.UI\\Blazor.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Client\\Blazor.UI\\Blazor.UI.csproj",
+        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Client\\Blazor.UI\\Blazor.UI.csproj",
         "projectName": "Blazor.UI",
-        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Client\\Blazor.UI\\Blazor.UI.csproj",
+        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Client\\Blazor.UI\\Blazor.UI.csproj",
         "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Client\\Blazor.UI\\obj\\",
+        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Client\\Blazor.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.20.1, )"
+            },
+            "Refit.HttpClientFactory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

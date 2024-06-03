@@ -1,10 +1,29 @@
-using Blazor.UI.Components;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorComponents()   // Add Razor Components service.
+    .AddInteractiveServerComponents();  // Add support for interactive server-side components.
+
+// Add a Refit client for the catalog service
+builder.Services.AddRefitClient<ICatalogService>()
+    .ConfigureHttpClient(c =>
+    {
+        c.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]!);
+    });
+
+// Add a Refit client for the basket service.
+builder.Services.AddRefitClient<IBasketService>()
+    .ConfigureHttpClient(c =>
+    {
+        c.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]!);
+    });
+
+// Add a Refit client for the ordering service.
+builder.Services.AddRefitClient<IOrderingService>()
+    .ConfigureHttpClient(c =>
+    {
+        c.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]!);
+    });
 
 var app = builder.Build();
 
@@ -16,12 +35,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+app.UseHttpsRedirection();  // Redirect HTTP requests to HTTPS.
+app.UseStaticFiles();       // Serve static files.
+app.UseRouting();           // Enable routing.
+app.UseAuthorization();     // Enable authorization.
+app.UseAntiforgery();       // Use antiforgery token generation and validation.
 
-app.UseStaticFiles();
-app.UseAntiforgery();
-
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.MapRazorComponents<App>()          // Map the Razor components to the application.
+    .AddInteractiveServerRenderMode(); // Enable interactive server-side rendering mode.
 
 app.Run();

@@ -1,0 +1,13 @@
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\bin\Debug\net8.0\EventBus.Messages.deps.json
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\bin\Debug\net8.0\EventBus.Messages.dll
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\bin\Debug\net8.0\EventBus.Messages.pdb
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\EventBus.Messages.csproj.AssemblyReference.cache
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\EventBus.Messages.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\EventBus.Messages.AssemblyInfoInputs.cache
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\EventBus.Messages.AssemblyInfo.cs
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\EventBus.Messages.csproj.CoreCompileInputs.cache
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\EventBus.Messages.sourcelink.json
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\EventBus.Messages.dll
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\refint\EventBus.Messages.dll
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\EventBus.Messages.pdb
+C:\Users\DE121166\Desktop\eShopping2\Infrastructure\EventBus.Messages\obj\Debug\net8.0\ref\EventBus.Messages.dll

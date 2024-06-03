@@ -811,11 +811,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\EventBus.Messages\\EventBus.Messages.csproj",
+      "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Infrastructure\\EventBus.Messages\\EventBus.Messages.csproj",
       "projectName": "EventBus.Messages",
-      "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\EventBus.Messages\\EventBus.Messages.csproj",
+      "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Infrastructure\\EventBus.Messages\\EventBus.Messages.csproj",
       "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\EventBus.Messages\\obj\\",
+      "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Infrastructure\\EventBus.Messages\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9ueXhMDb/80=",
+  "dgSpecHash": "Fplf6pyjOSI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\Infrastructure\\EventBus.Messages\\EventBus.Messages.csproj",
+  "projectFilePath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Infrastructure\\EventBus.Messages\\EventBus.Messages.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DE121166\\.nuget\\packages\\masstransit\\8.2.2\\masstransit.8.2.2.nupkg.sha512",
     "C:\\Users\\DE121166\\.nuget\\packages\\masstransit.abstractions\\8.2.2\\masstransit.abstractions.8.2.2.nupkg.sha512",

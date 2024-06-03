@@ -11,15 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CD4A6929-E135-4DBC-827F-E9C07F44A097}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{E8DE8918-DACC-48D4-9990-0820DD9611DE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{E8DE8918-DACC-48D4-9990-0820DD9611DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.UI", "Client\Blazor.UI\Blazor.UI.csproj", "{B748491A-720C-4B66-A50B-3A4F6ABD46DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.UI", "Client\Blazor.UI\Blazor.UI.csproj", "{B748491A-720C-4B66-A50B-3A4F6ABD46DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Messages", "Infrastructure\EventBus.Messages\EventBus.Messages.csproj", "{6CD46C70-F523-49C6-9CC5-0AAEE14AAB34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Messages", "Infrastructure\EventBus.Messages\EventBus.Messages.csproj", "{6CD46C70-F523-49C6-9CC5-0AAEE14AAB34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Infrastructure\Shared\Shared.csproj", "{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Infrastructure\Shared\Shared.csproj", "{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yarp.ApiGateway", "ApiGateway\Yarp.ApiGateway\Yarp.ApiGateway.csproj", "{EA940535-90F7-440B-AD2F-053915A655F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yarp.ApiGateway", "ApiGateway\Yarp.ApiGateway\Yarp.ApiGateway.csproj", "{EA940535-90F7-440B-AD2F-053915A655F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

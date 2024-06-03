@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\ApiGateway\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj",
+      "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\ApiGateway\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj",
       "projectName": "Yarp.ApiGateway",
-      "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\ApiGateway\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj",
+      "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\ApiGateway\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj",
       "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2-Microservice\\ApiGateway\\Yarp.ApiGateway\\obj\\",
+      "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\ApiGateway\\Yarp.ApiGateway\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
