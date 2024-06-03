@@ -42,14 +42,8 @@ public class ShoppingCartItemModel
     public string ProductName { get; set; }
 }
 
-// Represents the response returned when getting the basket
+// wrapper classes represent responses from an API
 public record GetBasketResponse(ShoppingCartModel Cart);
-
-// Represents the request to store a basket
 public record StoreBasketRequest(ShoppingCartModel Cart);
-
-// Represents the response returned when storing the basket
 public record StoreBasketResponse(string UserName);
-
-// Represents the response returned when deleting the basket
 public record DeleteBasketResponse(bool IsSuccess);

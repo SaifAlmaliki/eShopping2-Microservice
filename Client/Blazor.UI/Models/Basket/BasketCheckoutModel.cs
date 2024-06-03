@@ -66,8 +66,6 @@ public class BasketCheckoutModel
     public int PaymentMethod { get; }
 }
 
-// Wrapper class representing the request to checkout a basket
+// wrapper classes represent responses from an API
 public record CheckoutBasketRequest(BasketCheckoutModel BasketCheckoutDto);
-
-// Wrapper class representing the response after attempting to checkout a basket
 public record CheckoutBasketResponse(bool IsSuccess);

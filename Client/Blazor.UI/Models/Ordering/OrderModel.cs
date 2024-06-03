@@ -54,11 +54,7 @@ public enum OrderStatus
     Cancelled = 4   // Order is cancelled
 }
 
-// Wrapper class representing the response for getting a paginated list of orders
+// wrapper classes represent responses from an API
 public record GetOrdersResponse(PaginatedResult<OrderModel> Orders);
-
-// Wrapper class representing the response for getting orders by name
 public record GetOrdersByNameResponse(IEnumerable<OrderModel> Orders);
-
-// Wrapper class representing the response for getting orders by customer
 public record GetOrdersByCustomerResponse(IEnumerable<OrderModel> Orders);

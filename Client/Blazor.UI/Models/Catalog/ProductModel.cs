@@ -10,7 +10,7 @@ public class ProductModel
     public decimal Price { get; set; }
 }
 
-// These records represent responses from an API
+// wrapper records represent responses from an API
 public record GetProductsResponse(IEnumerable<ProductModel> Products);
 public record GetProductByCategoryResponse(IEnumerable<ProductModel> Products);
 public record GetProductByIdResponse(ProductModel Product);
