@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Yarp.ApiGateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+569004d13c310e73747a950de0ccd430f6dc0dde")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e04fbaec65cd2e7751fb7e0383cd57115b72b279")]
 [assembly: System.Reflection.AssemblyProductAttribute("Yarp.ApiGateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Yarp.ApiGateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

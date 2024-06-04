@@ -1,0 +1,49 @@
+name: CI for catalog.API
+
+on:
+  push:
+    branches:
+      - main
+      - 'release/*'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Setup Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Cache Docker layers
+      uses: actions/cache@v2
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-buildx-
+
+    - name: Build and test
+      run: |
+        docker build --target build --build-arg BUILD_CONFIGURATION=Release -t catalog-api:build .
+        docker run --rm catalog-api:build dotnet test /app/build
+
+    - name: Build and push Docker image
+      env:
+        DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+        DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        IMAGE_NAME: catalog-api
+      run: |
+        echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
+        docker build --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
+        docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
