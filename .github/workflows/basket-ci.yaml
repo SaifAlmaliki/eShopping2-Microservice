@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest  # Use the latest Ubuntu runner
 
     steps:
@@ -37,30 +37,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-buildx-  # Restore key to use if the specific key is not found
 
-    # Step to build the Docker image
-    - name: Build Docker image
-      id: build  # ID to reference this step in subsequent steps
-      run: |
-        # Build the Docker image using the specified Dockerfile and build arguments
-        docker build --file Services/Basket/Basket.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t basket-api:build .
-        # Generate a unique image tag using the current date/time and commit SHA
-        IMAGE_TAG=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA}
-        echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV  # Save the tag to an environment variable
-
-  # Define the push job, which depends on the build job
-  push:
-    needs: build  # Ensure the push job runs only after the build job is successful
-    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
-
-    steps:
-    # Step to checkout the repository code (necessary for Docker context)
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    # Step to set up Docker Buildx again (needed because it's a new job)
-    - name: Setup Docker Buildx
-      uses: docker/setup-buildx-action@v1
-
     # Step to log in to DockerHub using the provided credentials
     - name: Login to DockerHub
       env:
@@ -68,23 +44,15 @@ jobs:
         DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}  # Use DockerHub password from secrets
       run: echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin  # Log in to DockerHub
 
-    # Step to tag and push the Docker image
-    - name: Push Docker image
+    # Step to build and push the Docker image
+    - name: Build and Push Docker image
       env:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}  # Use DockerHub username from secrets
         IMAGE_NAME: basket-api  # Define the image name
-        IMAGE_TAG: ${{ env.IMAGE_TAG }}  # Use the image tag generated in the build step
       run: |
-        # Ensure the IMAGE_TAG is set
-        if [ -z "${IMAGE_TAG}" ]; then
-          echo "IMAGE_TAG is not set"
-          exit 1
-        fi
-        # Debug output to ensure the IMAGE_TAG is correctly used
-        echo "Tagging image with tag: ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}"
-        # Tag the built image with the unique tag and the 'latest' tag
-        docker tag basket-api:build ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
-        docker tag basket-api:build ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
+        # Build the Docker image using the specified Dockerfile and build arguments
+        IMAGE_TAG=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA}
+        docker build --file Services/Basket/Basket.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
         # Push both tags to DockerHub
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
