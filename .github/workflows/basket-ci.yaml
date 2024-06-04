@@ -51,7 +51,8 @@ jobs:
         # Build the Docker image using the specified Dockerfile and build arguments
         docker build --file Services/Basket/Basket.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t basket-api:build .
         # Generate a unique image tag using the current date/time and commit SHA
-        echo "IMAGE_TAG=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA}" >> $GITHUB_ENV  # Save the tag to an environment variable
+        IMAGE_TAG=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA}
+        echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV  # Save the tag to an environment variable
 
   # Define the push job, which depends on the build job
   push:
