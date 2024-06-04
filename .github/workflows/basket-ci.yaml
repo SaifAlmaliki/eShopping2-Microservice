@@ -1,6 +1,5 @@
-name: CI for catalog.API
+name: CI for Basket.API
 
-# Trigger the workflow on push to main or any release/* branches and on pull requests to main
 on:
   push:
     branches:
@@ -12,12 +11,11 @@ on:
 #on:
 #  push:
 #    paths:
-#      - 'Services/Catalog/Catalog.API/**'
+#      - 'Services/Basket/Basket.API/**'
 #  pull_request:
 #    paths:
-#      - 'Services/Catalog/Catalog.API/**'
+#      - 'Services/Basket/Basket.API/**'
 
-# Define the build job
 jobs:
   build:
     runs-on: ubuntu-latest  # Use the latest Ubuntu runner
@@ -51,7 +49,7 @@ jobs:
       id: build  # ID to reference this step in subsequent steps
       run: |
         # Build the Docker image using the specified Dockerfile and build arguments
-        docker build --file Services/Catalog/Catalog.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t catalog-api:build .
+        docker build --file Services/Basket/Basket.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t basket-api:build .
         # Generate a unique image tag using the current date/time and commit SHA
         echo "IMAGE_TAG=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA}" >> $GITHUB_ENV  # Save the tag to an environment variable
 
@@ -80,12 +78,12 @@ jobs:
     - name: Push Docker image
       env:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}  # Use DockerHub username from secrets
-        IMAGE_NAME: catalog-api           # Define the image name
-        IMAGE_TAG: ${{ env.IMAGE_TAG }}   # Use the image tag generated in the build step
+        IMAGE_NAME: basket-api  # Define the image name
+        IMAGE_TAG: ${{ env.IMAGE_TAG }}  # Use the image tag generated in the build step
       run: |
         # Tag the built image with the unique tag and the 'latest' tag
-        docker tag catalog-api:build ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
-        docker tag catalog-api:build ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
+        docker tag basket-api:build ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
+        docker tag basket-api:build ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
         # Push both tags to DockerHub
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
