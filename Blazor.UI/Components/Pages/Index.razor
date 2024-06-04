@@ -32,7 +32,7 @@
 
         @if (ProductList.Any())
         {
-            <TopProductPartial Product="ProductList.FirstOrDefault()" />
+            <_TopProductPartial Product="ProductList.FirstOrDefault()" />
         }
     </div>
 </div>
@@ -49,7 +49,7 @@
                         @foreach (var product in ProductList.Take(4))
                         {
                             <div class="col-sm">
-                                <ProductItemPartial Product="product" OnAddToCart="AddToCart" />
+                                <_ProductItemPartial Product="product" OnAddToCart="AddToCart" />
                             </div>
                         }
                     </div>
@@ -71,7 +71,7 @@
                         @foreach (var product in ProductList.TakeLast(4))
                         {
                             <div class="col-sm">
-                                <ProductItemPartial Product="product" OnAddToCart="AddToCart" />
+                                <_ProductItemPartial Product="product" OnAddToCart="AddToCart" />
                             </div>
                         }
                     </div>
@@ -84,6 +84,7 @@
 @code {
 
     private IEnumerable<ProductModel> ProductList { get; set; } = new List<ProductModel>();
+    
     [Inject]
     private NavigationManager NavigationManager { get; set; }
 
