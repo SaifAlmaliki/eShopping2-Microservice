@@ -1,5 +1,6 @@
 name: CI for catalog.API
 
+# Trigger the workflow on push to main or any release/* branches and on pull requests to main
 on:
   push:
     branches:
@@ -9,44 +10,75 @@ on:
     branches:
       - main
 
+# Define the build job
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
 
     steps:
+    # Step to checkout the repository code
     - name: Checkout code
       uses: actions/checkout@v2
 
+    # Step to set up .NET environment
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '8.0.x'
+        dotnet-version: '8.0.x'  # Specify the version of .NET to install
 
+    # Step to set up Docker Buildx, a builder for multi-platform builds
     - name: Setup Docker Buildx
       uses: docker/setup-buildx-action@v1
 
+    # Step to cache Docker layers to speed up subsequent builds
     - name: Cache Docker layers
       uses: actions/cache@v2
       with:
-        path: /tmp/.buildx-cache
-        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        path: /tmp/.buildx-cache  # Path to cache Docker layers
+        key: ${{ runner.os }}-buildx-${{ github.sha }}  # Cache key
         restore-keys: |
-          ${{ runner.os }}-buildx-
+          ${{ runner.os }}-buildx-  # Restore key to use if the specific key is not found
 
+    # Step to build the Docker image
     - name: Build Docker image
+      id: build  # ID to reference this step in subsequent steps
       run: |
+        # Build the Docker image using the specified Dockerfile and build arguments
         docker build --file Services/Catalog/Catalog.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t catalog-api:build .
+        # Generate a unique image tag using the current date/time and commit SHA
+        echo "IMAGE_TAG=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA}" >> $GITHUB_ENV  # Save the tag to an environment variable
 
+  # Define the push job, which depends on the build job
+  push:
+    needs: build  # Ensure the push job runs only after the build job is successful
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+
+    steps:
+    # Step to checkout the repository code (necessary for Docker context)
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Step to set up Docker Buildx again (needed because it's a new job)
+    - name: Setup Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    # Step to log in to DockerHub using the provided credentials
+    - name: Login to DockerHub
+      env:
+        DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}  # Use DockerHub username from secrets
+        DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}  # Use DockerHub password from secrets
+      run: echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin  # Log in to DockerHub
+
+    # Step to tag and push the Docker image
     - name: Push Docker image
       env:
-        DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-        DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
-        IMAGE_NAME: catalog-api
-        GITHUB_SHA: ${{ github.sha }}
-        GITHUB_RUN_NUMBER: ${{ github.run_number }}
+        DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}  # Use DockerHub username from secrets
+        IMAGE_NAME: catalog-api           # Define the image name
+        IMAGE_TAG: ${{ env.IMAGE_TAG }}   # Use the image tag generated in the build step
       run: |
-        echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
-        IMAGE_TAG=${GITHUB_SHA}-${GITHUB_RUN_NUMBER}
-        docker build --file Services/Catalog/Catalog.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
+        # Tag the built image with the unique tag and the 'latest' tag
+        docker tag catalog-api:build ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
+        docker tag catalog-api:build ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
+        # Push both tags to DockerHub
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
