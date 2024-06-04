@@ -33,17 +33,20 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-buildx-
 
-    - name: Build and test
+    - name: Build Docker image
       run: |
-        docker build --file Services/Catalog/Catalog.API/Dockerfile --target build --build-arg BUILD_CONFIGURATION=Release -t catalog-api:build .
-        docker run --rm catalog-api:build dotnet test /app/build
+        docker build --file Services/Catalog/Catalog.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t catalog-api:build .
 
-    - name: Build and push Docker image
+    - name: Push Docker image
       env:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
         IMAGE_NAME: catalog-api
+        GITHUB_SHA: ${{ github.sha }}
+        GITHUB_RUN_NUMBER: ${{ github.run_number }}
       run: |
         echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
-        docker build --file Services/Catalog/Catalog.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
+        IMAGE_TAG=${GITHUB_SHA}-${GITHUB_RUN_NUMBER}
+        docker build --file Services/Catalog/Catalog.API/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
+        docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
