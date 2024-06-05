@@ -1,0 +1,148 @@
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa]ssembly[Ii]nfo.cs
+[Aa]ssembly[Ii]nfo.fs
+[Aa]ssembly[Ii]nfo.vb
+*.[Pp]db
+*.buildslog
+*.log
+*.tlog
+*.visualelementsmanifest.xml
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.userprefs
+*.csproj.user
+
+# .NET Core build results
+bin/
+obj/
+
+# Microsoft Visual Studio
+.vscode/
+.vscode-test/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+Generated_Code/
+
+# Log files
+*.log
+
+# NPM Packages
+node_modules/
+jspm_packages/
+
+# VS Code directories
+.vscode/
+.history/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/packages/
+.nuget/packages.config
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa]ssembly[Ii]nfo.cs
+[Aa]ssembly[Ii]nfo.fs
+[Aa]ssembly[Ii]nfo.vb
+*.[Pp]db
+*.buildslog
+*.log
+*.tlog
+*.visualelementsmanifest.xml
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.userprefs
+*.csproj.user
+
+# .NET Core build results
+bin/
+obj/
+
+# Microsoft Visual Studio
+.vscode/
+.vscode-test/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+Generated_Code/
+
+# Log files
+*.log
+
+# NPM Packages
+node_modules/
+jspm_packages/
+
+# VS Code directories
+.vscode/
+.history/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/packages/
+.nuget/packages.config
