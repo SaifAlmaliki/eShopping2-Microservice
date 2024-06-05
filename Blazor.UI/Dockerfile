@@ -9,10 +9,10 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Client/Blazor.UI/Blazor.UI.csproj", "Client/Blazor.UI/"]
-RUN dotnet restore "./Client/Blazor.UI/Blazor.UI.csproj"
+COPY ["eShopping2/Blazor.UI/Blazor.UI.csproj", "eShopping2/Blazor.UI/"]
+RUN dotnet restore "./eShopping2/Blazor.UI/Blazor.UI.csproj"
 COPY . .
-WORKDIR "/src/Client/Blazor.UI"
+WORKDIR "/src/eShopping2/Blazor.UI"
 RUN dotnet build "./Blazor.UI.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
