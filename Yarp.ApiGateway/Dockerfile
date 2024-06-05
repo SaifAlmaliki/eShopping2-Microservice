@@ -9,10 +9,10 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["eShopping2/Yarp.ApiGateway/Yarp.ApiGateway.csproj", "eShopping2/Yarp.ApiGateway/"]
-RUN dotnet restore "./eShopping2/Yarp.ApiGateway/Yarp.ApiGateway.csproj"
+COPY ["Yarp.ApiGateway/Yarp.ApiGateway.csproj", "Yarp.ApiGateway/"]
+RUN dotnet restore "./Yarp.ApiGateway/Yarp.ApiGateway.csproj"
 COPY . .
-WORKDIR "/src/eShopping2/Yarp.ApiGateway"
+WORKDIR "/src/Yarp.ApiGateway"
 RUN dotnet build "./Yarp.ApiGateway.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish

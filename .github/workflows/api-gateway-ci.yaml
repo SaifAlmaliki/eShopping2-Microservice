@@ -43,7 +43,7 @@ jobs:
       run: |
         # Build the Docker image using the specified Dockerfile and build arguments
         IMAGE_TAG=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA}
-        docker build --no-cache --file eShopping2/Yarp.ApiGateway/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
+        docker build --no-cache --file Yarp.ApiGateway/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
         # Push both tags to DockerHub
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
