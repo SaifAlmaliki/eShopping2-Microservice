@@ -1,4 +1,4 @@
-name: CI for yarp.ApiGateway
+name: CI for Blazor.UI
 
 on:
   push:
@@ -48,11 +48,11 @@ jobs:
     - name: Build and Push Docker image
       env:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}  # Use DockerHub username from secrets
-        IMAGE_NAME: yarp-apigateway  # Define the image name
+        IMAGE_NAME: blazor-ui  # Define the image name
       run: |
         # Build the Docker image using the specified Dockerfile and build arguments
         IMAGE_TAG=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA}
-        docker build --file eShopping2/Yarp.ApiGateway/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
+        docker build --file eShopping2/Blazor.UI/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
         # Push both tags to DockerHub
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
