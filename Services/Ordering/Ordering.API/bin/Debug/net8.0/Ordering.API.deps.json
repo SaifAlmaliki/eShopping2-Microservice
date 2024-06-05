@@ -1319,20 +1319,6 @@
             "fileVersion": "7.4.1.0"
           }
         }
-      },
-      "eshop.ServiceDefaults/1.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Http.Resilience": "8.3.0",
-          "Microsoft.Extensions.ServiceDiscovery": "8.0.0",
-          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.8.1",
-          "OpenTelemetry.Extensions.Hosting": "1.8.1",
-          "OpenTelemetry.Instrumentation.AspNetCore": "1.8.1",
-          "OpenTelemetry.Instrumentation.Http": "1.8.1",
-          "OpenTelemetry.Instrumentation.Runtime": "1.8.0"
-        },
-        "runtime": {
-          "eshop.ServiceDefaults.dll": {}
-        }
       }
     }
   },
@@ -2069,11 +2055,6 @@
       "sha512": "sha512-Csxzf3vuPRPcsxgJC+8uZsee4vyBqUG2P+Ht20lGo64+ruARmIAKxHt2e99GU66btSL8pId7qM/vqoFO4NORCQ==",
       "path": "weasel.postgresql/7.4.1",
       "hashPath": "weasel.postgresql.7.4.1.nupkg.sha512"
-    },
-    "eshop.ServiceDefaults/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

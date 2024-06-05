@@ -45,8 +45,6 @@ C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0
 C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\eshop.ServiceDefaults.dll
-C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\eshop.ServiceDefaults.pdb
 C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\Basket.API.csproj.AssemblyReference.cache
 C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\Basket.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\Basket.API.AssemblyInfoInputs.cache
