@@ -28,15 +28,6 @@ jobs:
     - name: Setup Docker Buildx
       uses: docker/setup-buildx-action@v1
 
-    # Step to cache Docker layers to speed up subsequent builds
-    - name: Cache Docker layers
-      uses: actions/cache@v2
-      with:
-        path: /tmp/.buildx-cache  # Path to cache Docker layers
-        key: ${{ runner.os }}-buildx-${{ github.sha }}  # Cache key
-        restore-keys: |
-          ${{ runner.os }}-buildx-  # Restore key to use if the specific key is not found
-
     # Step to log in to DockerHub using the provided credentials
     - name: Login to DockerHub
       env:
@@ -52,7 +43,7 @@ jobs:
       run: |
         # Build the Docker image using the specified Dockerfile and build arguments
         IMAGE_TAG=$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA}
-        docker build --file eShopping2/Yarp.ApiGateway/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
+        docker build --no-cache --file eShopping2/Yarp.ApiGateway/Dockerfile --build-arg BUILD_CONFIGURATION=Release -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest .
         # Push both tags to DockerHub
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
         docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest
