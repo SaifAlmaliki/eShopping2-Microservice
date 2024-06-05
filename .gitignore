@@ -30,8 +30,9 @@ bin/
 obj/
 
 # Microsoft Visual Studio
-.vscode/
-.vscode-test/
+.vs/
+obj/
+bin/
 
 # User-specific files
 *.rsuser
