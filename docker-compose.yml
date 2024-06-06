@@ -7,51 +7,51 @@ services:
   basketdb:
     image: postgres
 
-  distributedcache:
-    image: redis
+#  distributedcache:
+#    image: redis
 
-  orderdb:
-    image: mcr.microsoft.com/mssql/server
+#  orderdb:
+#    image: mcr.microsoft.com/mssql/server
 
-  messagebroker:
-    image: rabbitmq:management
+#  messagebroker:
+#    image: rabbitmq:management
 
   
-  discount.grpc:
-    image: ${DOCKER_REGISTRY-}discountgrpc
-    build:
-      context: .
-      dockerfile: Services/Discount/Discount.Grpc/Dockerfile
+#  discount.grpc:
+#    image: ${DOCKER_REGISTRY-}discountgrpc
+#    build:
+#      context: .
+#      dockerfile: Services/Discount/Discount.Grpc/Dockerfile
 
-  ordering.api:
-    image: ${DOCKER_REGISTRY-}orderingapi
-    build:
-      context: .
-      dockerfile: Services/Ordering/Ordering.API/Dockerfile
+#  ordering.api:
+#    image: ${DOCKER_REGISTRY-}orderingapi
+#    build:
+#      context: .
+#      dockerfile: Services/Ordering/Ordering.API/Dockerfile
 
-  catalog.api:
-    image: ${DOCKER_REGISTRY-}catalogapi
-    build:
-      context: .
-      dockerfile: Services/Catalog/Catalog.API/Dockerfile
+#  catalog.api:
+#    image: ${DOCKER_REGISTRY-}catalogapi
+#    build:
+#      context: .
+#      dockerfile: Services/Catalog/Catalog.API/Dockerfile
 
-  basket.api:
-    image: ${DOCKER_REGISTRY-}basketapi
-    build:
-      context: .
-      dockerfile: Services/Basket/Basket.API/Dockerfile
+#  basket.api:
+#    image: ${DOCKER_REGISTRY-}basketapi
+#    build:
+#      context: .
+#      dockerfile: Services/Basket/Basket.API/Dockerfile
 
-  yarp.apigateway:
-    image: ${DOCKER_REGISTRY-}yarpapigateway
-    build:
-      context: ..
-      dockerfile: eShopping2/Yarp.ApiGateway/Dockerfile
+#  yarp.apigateway:
+#    image: ${DOCKER_REGISTRY-}yarpapigateway
+#    build:
+#      context: ..
+#      dockerfile: eShopping2/Yarp.ApiGateway/Dockerfile
 
-  blazor.ui:
-    image: ${DOCKER_REGISTRY-}blazorui
-    build:
-      context: ..
-      dockerfile: eShopping2/Blazor.UI/Dockerfile
+#  blazor.ui:
+#    image: ${DOCKER_REGISTRY-}blazorui
+#    build:
+#      context: ..
+#      dockerfile: eShopping2/Blazor.UI/Dockerfile
 
 volumes:
   postgres_catalog:

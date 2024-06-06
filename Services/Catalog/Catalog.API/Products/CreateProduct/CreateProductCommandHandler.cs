@@ -27,16 +27,18 @@ internal class CreateProductCommandHandler : ICommandHandler<CreateProductComman
     // Handle method to process the command and return the result
     public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Starting the product creation process for product: {ProductName}", command.Name);
+        _logger.LogDebug("Starting the product creation process for product: {ProductName}", command.Name);
 
         var product = CreateProductEntity(command);
 
-        _logger.LogInformation("Product entity created with Name: {Name}, Category: {Category}, Description: {Description}, ImageFile: {ImageFile}, Price: {Price}",
+        _logger.LogDebug("Product entity created with Name: {Name}, Category: {Category}, Description: {Description}, ImageFile: {ImageFile}, Price: {Price}",
             product.Name, string.Join(", ", product.Category), product.Description, product.ImageFile, product.Price);
 
-        await SaveProductToDatabase(product, cancellationToken);
+        // Save the product entity to the database
+        _session.Store(product);
+        await _session.SaveChangesAsync(cancellationToken);
 
-        _logger.LogInformation("Product saved to the database with ID: {ProductId}", product.Id);
+        _logger.LogInformation("Product saved succussfully to the database with ID: {ProductId}", product.Id);
 
         return new CreateProductResult(product.Id);
     }
@@ -54,12 +56,5 @@ internal class CreateProductCommandHandler : ICommandHandler<CreateProductComman
             ImageFile = command.ImageFile,
             Price = command.Price
         };
-    }
-
-    // Save the product entity to the database
-    private async Task SaveProductToDatabase(Product product, CancellationToken cancellationToken)
-    {
-        _session.Store(product);
-        await _session.SaveChangesAsync(cancellationToken);
     }
 }
