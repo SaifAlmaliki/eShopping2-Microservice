@@ -1,8 +1,3 @@
-
-using Carter;
-using Mapster;
-using MediatR;
-
 namespace Catalog.API.Products.CreateProduct;
 
 // Record type representing the request to create a product
