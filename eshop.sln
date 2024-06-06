@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployments", "Deployments"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.UI", "Blazor.UI\Blazor.UI.csproj", "{B748491A-720C-4B66-A50B-3A4F6ABD46DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Messages", "Infrastructure\EventBus.Messages\EventBus.Messages.csproj", "{6CD46C70-F523-49C6-9CC5-0AAEE14AAB34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Messages", "EventBus.Messages\EventBus.Messages.csproj", "{6CD46C70-F523-49C6-9CC5-0AAEE14AAB34}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Infrastructure\Shared\Shared.csproj", "{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yarp.ApiGateway", "Yarp.ApiGateway\Yarp.ApiGateway.csproj", "{EA940535-90F7-440B-AD2F-053915A655F4}"
 EndProject
