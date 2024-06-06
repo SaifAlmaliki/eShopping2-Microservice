@@ -41,9 +41,23 @@ services:
       context: .
       dockerfile: Services/Basket/Basket.API/Dockerfile
 
+  yarp.apigateway:
+    image: ${DOCKER_REGISTRY-}yarpapigateway
+    build:
+      context: ..
+      dockerfile: eShopping2/Yarp.ApiGateway/Dockerfile
+
+  blazor.ui:
+    image: ${DOCKER_REGISTRY-}blazorui
+    build:
+      context: ..
+      dockerfile: eShopping2/Blazor.UI/Dockerfile
+
 volumes:
   postgres_catalog:
   postgres_basket:
+
+
 
 
 
