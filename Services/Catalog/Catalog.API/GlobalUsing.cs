@@ -4,3 +4,6 @@ global using MediatR;
 global using Shared.CQRS;
 global using Catalog.API.Models;
 global using FluentValidation;
+global using HealthChecks.UI.Client;
+global using Marten;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
