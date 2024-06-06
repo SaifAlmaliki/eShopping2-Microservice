@@ -11,13 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Products\NewFolder\**" />
-    <Content Remove="Products\NewFolder\**" />
-    <EmbeddedResource Remove="Products\NewFolder\**" />
-    <None Remove="Products\NewFolder\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
     <PackageReference Include="Carter" Version="8.0.0" />    
