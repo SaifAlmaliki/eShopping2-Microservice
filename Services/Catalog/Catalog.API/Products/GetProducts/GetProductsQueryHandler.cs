@@ -27,7 +27,7 @@ internal class GetProductsQueryHandler : IQueryHandler<GetProductsQuery, GetProd
         var pageNumber = query.PageNumber ?? 1;
         var pageSize = query.PageSize ?? 10;
 
-        _logger.LogDebug("Retrieving products - Page Number: {PageNumber}, Page Size: {PageSize}", pageNumber, pageSize);
+        _logger.LogInformation("Retrieving products - Page Number: {PageNumber}, Page Size: {PageSize}", pageNumber, pageSize);
 
         // Retrieve the list of products from the database
         var products = await _session.Query<Product>()
