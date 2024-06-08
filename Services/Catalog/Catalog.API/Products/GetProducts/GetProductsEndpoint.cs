@@ -1,8 +1,4 @@
-﻿// The purpose of this code is to handle the retrieval of products from the catalog system.
-// It defines the request and response models, as well as the endpoint to process the retrieval request
-// and return the list of products.
-
-namespace Catalog.API.Products.GetProducts;
+﻿namespace Catalog.API.Products.GetProducts;
 
 // Define a request model to specify pagination parameters for retrieving products
 public record GetProductsRequest(int? PageNumber = 1, int? PageSize = 10);
@@ -17,7 +13,18 @@ public class GetProductsEndpoint : ICarterModule
     public void AddRoutes(IEndpointRouteBuilder app)
     {
         // Map a GET request to the /products endpoint
-        app.MapGet("/products", async ([AsParameters] GetProductsRequest request, ISender sender) =>
+        app.MapGet("/products", HandleGetProductsAsync)
+            .WithName("GetProducts")
+            .Produces<GetProductsResponse>(StatusCodes.Status200OK) // Specify the successful response type and status code
+            .ProducesProblem(StatusCodes.Status400BadRequest)       // Specify the error response type and status code
+            .WithSummary("Get Products")
+            .WithDescription("Get Products");
+    }
+
+    // Async handler for GET request to retrieve products
+    private static async Task<IResult> HandleGetProductsAsync([AsParameters] GetProductsRequest request, ISender sender)
+    {
+        try
         {
             // Adapt the request model to a query model for retrieving products
             var query = request.Adapt<GetProductsQuery>();
@@ -30,12 +37,10 @@ public class GetProductsEndpoint : ICarterModule
 
             // Return an OK result with the response model
             return Results.Ok(response);
-        })
-        // Provide additional metadata for the endpoint
-        .WithName("GetProducts")
-        .Produces<GetProductsResponse>(StatusCodes.Status200OK)
-        .ProducesProblem(StatusCodes.Status400BadRequest)
-        .WithSummary("Get Products")
-        .WithDescription("Get Products");
+        }
+        catch (Exception)
+        {
+            return Results.Problem("An error occurred while retrieving products.", statusCode: StatusCodes.Status500InternalServerError);
+        }
     }
 }
