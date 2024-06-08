@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B498B2D-555D-4A5B-90B6-AE4FC29E1C8F}|Services\\Catalog\\Catalog.API\\Catalog.API.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\catalog\\catalog.api\\products\\getproductbyid\\getproductbyidendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B498B2D-555D-4A5B-90B6-AE4FC29E1C8F}|Services\\Catalog\\Catalog.API\\Catalog.API.csproj|solutionrelative:services\\catalog\\catalog.api\\products\\getproductbyid\\getproductbyidendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B498B2D-555D-4A5B-90B6-AE4FC29E1C8F}|Services\\Catalog\\Catalog.API\\Catalog.API.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\catalog\\catalog.api\\products\\deleteproduct\\deleteproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B498B2D-555D-4A5B-90B6-AE4FC29E1C8F}|Services\\Catalog\\Catalog.API\\Catalog.API.csproj|solutionrelative:services\\catalog\\catalog.api\\products\\deleteproduct\\deleteproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B498B2D-555D-4A5B-90B6-AE4FC29E1C8F}|Services\\Catalog\\Catalog.API\\Catalog.API.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\catalog\\catalog.api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B498B2D-555D-4A5B-90B6-AE4FC29E1C8F}|Services\\Catalog\\Catalog.API\\Catalog.API.csproj|solutionrelative:services\\catalog\\catalog.api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B498B2D-555D-4A5B-90B6-AE4FC29E1C8F}|Services\\Catalog\\Catalog.API\\Catalog.API.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\catalog\\catalog.api\\products\\deleteproduct\\deleteproductendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B498B2D-555D-4A5B-90B6-AE4FC29E1C8F}|Services\\Catalog\\Catalog.API\\Catalog.API.csproj|solutionrelative:services\\catalog\\catalog.api\\products\\deleteproduct\\deleteproductendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.API\\Models\\Product.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Models\\Product.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.API\\Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T12:31:17.355Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
@@ -44,14 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetProductByIdEndpoint.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Products\\GetProductById\\GetProductByIdEndpoint.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.API\\Products\\GetProductById\\GetProductByIdEndpoint.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Products\\GetProductById\\GetProductByIdEndpoint.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.API\\Products\\GetProductById\\GetProductByIdEndpoint.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAEAAAA",
+              "Title": "DeleteProductCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.API\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
+              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catalog.API\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAkwCwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T12:27:28.905Z",
+              "WhenOpened": "2024-06-08T20:09:40.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DeleteProductEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Products\\DeleteProduct\\DeleteProductEndpoint.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.API\\Products\\DeleteProduct\\DeleteProductEndpoint.cs",
+              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Products\\DeleteProduct\\DeleteProductEndpoint.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catalog.API\\Products\\DeleteProduct\\DeleteProductEndpoint.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA9wBwAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T20:09:26.198Z",
               "EditorCaption": ""
             }
           ]

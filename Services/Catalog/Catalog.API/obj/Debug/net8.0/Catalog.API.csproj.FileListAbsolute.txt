@@ -1,3 +1,11 @@
+C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.csproj.AssemblyReference.cache
+C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.AssemblyInfoInputs.cache
+C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.AssemblyInfo.cs
+C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.csproj.CoreCompileInputs.cache
+C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.sourcelink.json
 C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\bin\Debug\net8.0\appsettings.json
 C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\bin\Debug\net8.0\Catalog.API.exe
@@ -156,14 +164,6 @@ C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\bin\Debug\net8
 C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\bin\Debug\net8.0\Shared.dll
 C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\bin\Debug\net8.0\Shared.pdb
-C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.csproj.AssemblyReference.cache
-C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.AssemblyInfoInputs.cache
-C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.AssemblyInfo.cs
-C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.csproj.CoreCompileInputs.cache
-C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\Catalog.API.sourcelink.json
 C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\DE121166\Desktop\eShopping2\Services\Catalog\Catalog.API\obj\Debug\net8.0\staticwebassets\msbuild.Catalog.API.Microsoft.AspNetCore.StaticWebAssets.props
