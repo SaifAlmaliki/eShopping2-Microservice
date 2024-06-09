@@ -23,49 +23,31 @@ public class CreateProductCommandValidator : AbstractValidator<CreateProductComm
 internal class CreateProductCommandHandler : ICommandHandler<CreateProductCommand, CreateProductResult>
 {
     private readonly IDocumentSession _session;
-    private readonly ILogger<CreateProductCommandHandler> _logger;
 
-    // Constructor to initialize the session and logger
-    public CreateProductCommandHandler(IDocumentSession session, ILogger<CreateProductCommandHandler> logger)
+    // Constructor to initialize the session
+    public CreateProductCommandHandler(IDocumentSession session)
     {
         _session = session ?? throw new ArgumentNullException(nameof(session));
-        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
     // Handle method to process the command and return the result
     public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
-        try
+        // Create a new product entity from the command details
+        var product = new Product
         {
-            _logger.LogInformation("Starting the product creation process for product: {ProductName}", command.Name);
+            Name = command.Name,
+            Category = command.Category,
+            Description = command.Description,
+            ImageFile = command.ImageFile,
+            Price = command.Price
+        };
 
-            // Create a new product entity from the command details
-            var product = new Product
-            {
-                Name = command.Name,
-                Category = command.Category,
-                Description = command.Description,
-                ImageFile = command.ImageFile,
-                Price = command.Price
-            };
-
-            _logger.LogInformation("Product entity created with Name: {Name}, Category: {Category}, Description: {Description}, ImageFile: {ImageFile}, Price: {Price}",
-               product.Name, string.Join(", ", product.Category), product.Description, product.ImageFile, product.Price);
-
-            // Save the product entity to the database
-            _session.Store(product);
-            await _session.SaveChangesAsync(cancellationToken);
-
-            _logger.LogInformation("Product saved successfully to the database with ID: {ProductId}", product.Id);
+        // Save the product entity to the database
+        _session.Store(product);
+        await _session.SaveChangesAsync(cancellationToken);
 
             // Return the result containing the new product ID
-            return new CreateProductResult(product.Id);
-        }
-        catch (Exception ex)
-        {
-            // Log any errors that occur during the process
-            _logger.LogError(ex, "Error occurred while creating product: {ProductName}", command.Name);
-            throw;
-        }
+        return new CreateProductResult(product.Id);
     }
 }

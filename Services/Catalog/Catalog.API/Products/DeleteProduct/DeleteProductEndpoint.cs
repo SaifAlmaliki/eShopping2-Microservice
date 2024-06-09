@@ -19,12 +19,8 @@ public class DeleteProductEndpoint : ICarterModule
     }
 
     // Private method to handle the delete product request
-    private static async Task<IResult> HandleDeleteProduct(Guid id, ISender sender, ILogger<DeleteProductEndpoint> logger)
+    private static async Task<IResult> HandleDeleteProduct(Guid id, ISender sender)
     {
-        logger.LogInformation("Handling delete for Product ID: {ProductId}", id);
-
-        try
-        {
             // Send the command to delete the product
             var result = await sender.Send(new DeleteProductCommand(id));
 
@@ -33,12 +29,7 @@ public class DeleteProductEndpoint : ICarterModule
 
             // Return the response with a 200 OK status
             return Results.Ok(response);
-        }
-        catch (Exception ex)
-        {
-            // Log any exceptions that occur during the process
-            logger.LogError(ex, "Error occurred while deleting Product with ID: {ProductId}", id);
-            return Results.Problem("An error occurred while deleting the product.");
-        }
+        
+
     }
 }

@@ -4,7 +4,12 @@ using Shared.CQRS;
 
 namespace Shared.Behaviors;
 
-// Define a validation behavior for the pipeline
+/* The ValidationBehavior class ensures that requests are validated before they are processed by the next handler in the pipeline.
+ * It uses the FluentValidation library to perform this validation. 
+ * If any validation errors are found, it throws a ValidationException with details of the failures, 
+ * thereby preventing the request from being processed further.
+ * 
+ * */
 public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : ICommand<TResponse>
 {
@@ -36,7 +41,7 @@ public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TReques
         if (failures.Any())
             throw new ValidationException(failures);
 
-        // Proceed to the next handler in the pipeline
+        // If no validation errors are found, the request is passed to the next handler in the pipeline
         return await next();
     }
 }

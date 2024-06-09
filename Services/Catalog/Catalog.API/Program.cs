@@ -22,13 +22,17 @@ void ConfigureServices(WebApplicationBuilder builder)
     // Get the current assembly reference.
     var assembly = typeof(Program).Assembly;
 
-    // Add MediatR services from the assembly and register a custom behavior for validation.
+    // Add MediatR services from the assembly and register custom behaviors for validation and logging.
     builder.Services.AddMediatR(config =>
     {
         // Registers all MediatR handlers and related services from the specified assembly.
         config.RegisterServicesFromAssembly(assembly);
-        // Adds a custom behavior to handle validation using FluentValidation.
+
+        // Registers the custom validation behavior to the MediatR pipeline.
         config.AddOpenBehavior(typeof(ValidationBehavior<,>));
+
+        // Registers the custom logging behavior to the MediatR pipeline.
+        config.AddOpenBehavior(typeof(LoggingBehavior<,>));
     });
 
     // Add FluentValidation services from the assembly

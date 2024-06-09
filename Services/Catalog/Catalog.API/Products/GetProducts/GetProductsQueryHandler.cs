@@ -12,13 +12,11 @@ public record GetProductsResult(IEnumerable<Product> Products);
 internal class GetProductsQueryHandler : IQueryHandler<GetProductsQuery, GetProductsResult>
 {
     private readonly IDocumentSession _session;
-    private readonly ILogger<GetProductsQueryHandler> _logger;
 
     // Constructor to initialize the session and logger
-    public GetProductsQueryHandler(IDocumentSession session, ILogger<GetProductsQueryHandler> logger)
+    public GetProductsQueryHandler(IDocumentSession session)
     {
         _session = session ?? throw new ArgumentNullException(nameof(session));
-        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
     // Handle method to process the query and return the result
@@ -27,13 +25,9 @@ internal class GetProductsQueryHandler : IQueryHandler<GetProductsQuery, GetProd
         var pageNumber = query.PageNumber ?? 1;
         var pageSize = query.PageSize ?? 10;
 
-        _logger.LogInformation("Retrieving products - Page Number: {PageNumber}, Page Size: {PageSize}", pageNumber, pageSize);
-
         // Retrieve the list of products from the database
         var products = await _session.Query<Product>()
             .ToPagedListAsync(pageNumber, pageSize, cancellationToken);
-
-        _logger.LogInformation("Retrieved {ProductCount} products", products.Count);
 
         // Return the result with the list of products
         return new GetProductsResult(products);
