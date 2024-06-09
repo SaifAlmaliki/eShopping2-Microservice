@@ -29,11 +29,11 @@ services:
 #      context: .
 #      dockerfile: Services/Ordering/Ordering.API/Dockerfile
 
-#  catalog.api:
-#    image: ${DOCKER_REGISTRY-}catalogapi
-#    build:
-#      context: .
-#      dockerfile: Services/Catalog/Catalog.API/Dockerfile
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: Services/Catalog/Catalog.API/Dockerfile
 
 #  basket.api:
 #    image: ${DOCKER_REGISTRY-}basketapi
