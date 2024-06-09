@@ -1,3 +1,5 @@
+using Catalog.API.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure services
@@ -55,6 +57,9 @@ void ConfigureServices(WebApplicationBuilder builder)
     // Configure health checks with PostgreSQL connection
     builder.Services.AddHealthChecks()
         .AddNpgSql(builder.Configuration.GetConnectionString("Database")!);
+
+    // Initialize Marten with CatalogInitialData during service configuration
+    builder.Services.InitializeMartenWith<CatalogInitialData>();
 }
 
 void ConfigureMiddleware(WebApplication app)

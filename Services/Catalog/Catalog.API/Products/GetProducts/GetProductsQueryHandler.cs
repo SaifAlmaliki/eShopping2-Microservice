@@ -1,5 +1,4 @@
-﻿// The purpose of this code is to handle the query for retrieving a paginated list of products from the catalog system.
-// It defines the query and result models, as well as the handler to process the query and return the list of products.
+﻿
 namespace Catalog.API.Products.GetProducts;
 
 // Define a query model to specify pagination parameters for retrieving products
