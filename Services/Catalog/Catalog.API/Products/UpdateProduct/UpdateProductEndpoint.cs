@@ -1,31 +1,33 @@
 ﻿namespace Catalog.API.Products.UpdateProduct;
 
-// Record to represent the request for updating a product
 public record UpdateProductRequest(Guid Id, string Name, List<string> Category, string Description, string ImageFile, decimal Price);
 
-// Record to represent the response for the update operation
 public record UpdateProductResponse(bool IsSuccess);
 
-// Endpoint class for updating a product
 public class UpdateProductEndpoint : ICarterModule
 {
+    private readonly ILogger<UpdateProductEndpoint> _logger;
+
+    public UpdateProductEndpoint(ILogger<UpdateProductEndpoint> logger)
+    {
+        _logger = logger;
+    }
+
     // Method to add routes to the app's routing table
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapPut("/products", HandleUpdateProduct)
+        app.MapPut("/products",HandleUpdateProductAsync)
             .WithName("UpdateProduct")
             .Produces<UpdateProductResponse>(StatusCodes.Status200OK)
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .ProducesProblem(StatusCodes.Status404NotFound)
-            .WithSummary("Update Product") 
+            .WithSummary("Update Product")
             .WithDescription("Update Product by specifying the details.");
     }
 
     // Private method to handle the update product request
-    private static async Task<IResult> HandleUpdateProduct(UpdateProductRequest request, ISender sender, ILogger<UpdateProductEndpoint> logger)
+    private async Task<IResult> HandleUpdateProductAsync(UpdateProductRequest request, ISender sender)
     {
-        logger.LogInformation("Handling update for Product ID: {ProductId}", request.Id);
-
         try
         {
             // Adapt the request to the command format
@@ -37,14 +39,37 @@ public class UpdateProductEndpoint : ICarterModule
             // Adapt the result to the response format
             var response = result.Adapt<UpdateProductResponse>();
 
-            // Return the response with a 200 OK status
+            // Log the success and return a 200 OK status with the response
+            _logger.LogInformation("Product '{ProductName}' updated successfully with ID: {ProductId}", command.Name, request.Id);
             return Results.Ok(response);
+        }
+        catch (ValidationException ex)
+        {
+            // Log validation errors
+            _logger.LogError(ex, "Validation failed for product update request: {Request}", request);
+
+            // Return a 400 Bad Request status with detailed validation error information
+            var errorDetails = new
+            {
+                Message = "Validation failed for one or more fields.",
+                Errors = ex.Errors.Select(e => new { e.PropertyName, e.ErrorMessage, e.Severity })
+            };
+
+            return Results.BadRequest(errorDetails);
         }
         catch (Exception ex)
         {
-            // Log any exceptions that occur during the process
-            logger.LogError(ex, "Error occurred while updating Product with ID: {ProductId}", request.Id);
-            return Results.Problem("An error occurred while updating the product.");
+            // Log unexpected errors
+            _logger.LogError(ex, "An unexpected error occurred while updating product: {Request}", request);
+
+            // Return a 500 Internal Server Error status with error details
+            var errorDetails = new
+            {
+                Message = "An unexpected error occurred while processing your request.",
+                Error = ex.Message
+            };
+
+            return Results.StatusCode(500);
         }
     }
 }

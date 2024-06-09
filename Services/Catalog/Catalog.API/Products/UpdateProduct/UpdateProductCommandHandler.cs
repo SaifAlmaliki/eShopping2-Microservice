@@ -7,11 +7,25 @@ public record UpdateProductCommand(Guid Id, string Name, List<string> Category, 
 // Result of the update product command
 public record UpdateProductResult(bool IsSuccess);
 
+public class UpdateProductCommandValidator : AbstractValidator<UpdateProductCommand>
+{
+    public UpdateProductCommandValidator()
+    {
+        RuleFor(command => command.Id).NotEmpty().WithMessage("Product ID is required");
+
+        RuleFor(command => command.Name)
+            .NotEmpty().WithMessage("Name is required")
+            .Length(2, 150).WithMessage("Name must be between 2 and 150 characters");
+
+        RuleFor(command => command.Price).GreaterThan(0).WithMessage("Price must be greater than 0");
+    }
+}
+
 // Handler class for processing the UpdateProductCommand
 internal class UpdateProductCommandHandler : ICommandHandler<UpdateProductCommand, UpdateProductResult>
 {
-    private readonly IDocumentSession _session;  // Session to interact with the data store
-    private readonly ILogger<UpdateProductCommandHandler> _logger;  // Logger instance
+    private readonly IDocumentSession _session;
+    private readonly ILogger<UpdateProductCommandHandler> _logger;
 
     // Constructor with dependency injection
     public UpdateProductCommandHandler(IDocumentSession session, ILogger<UpdateProductCommandHandler> logger)
