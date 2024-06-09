@@ -1,41 +1,79 @@
-using Shared.Behaviors;
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-// Add services to the container.
-var assembly = typeof(Program).Assembly;
-builder.Services.AddMediatR(config =>
-{
-    config.RegisterServicesFromAssembly(assembly);
-    config.AddOpenBehavior(typeof(ValidationBehavior<,>));
-});
-
-builder.Services.AddValidatorsFromAssembly(assembly);
-
-builder.Services.AddCarter();
-
-builder.Services.AddMarten(opts =>
-{
-    opts.Connection(builder.Configuration.GetConnectionString("Database")!);
-}).UseLightweightSessions();
+// Configure services
+ConfigureServices(builder);
 
 var app = builder.Build();
 
+// Configure middleware
+ConfigureMiddleware(app);
 
-// Configure the HTTP request pipeline.
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.MapCarter();
-
+// Run the application
 app.Run();
 
+void ConfigureServices(WebApplicationBuilder builder)
+{
+    // Add services to the container.
+    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+
+    
+    // Get the current assembly reference.
+    var assembly = typeof(Program).Assembly;
+
+    // Add MediatR services from the assembly and register a custom behavior for validation.
+    builder.Services.AddMediatR(config =>
+    {
+        // Registers all MediatR handlers and related services from the specified assembly.
+        config.RegisterServicesFromAssembly(assembly);
+        // Adds a custom behavior to handle validation using FluentValidation.
+        config.AddOpenBehavior(typeof(ValidationBehavior<,>));
+    });
+
+    // Add FluentValidation services from the assembly
+    // This automatically scans the assembly for Validator classes and registers them.
+    builder.Services.AddValidatorsFromAssembly(assembly);
+
+    // Add Carter for minimal API routing
+    builder.Services.AddCarter();
+
+    // Configure Marten with a connection string from the configuration and use lightweight sessions
+    // Marten is a library for working with PostgreSQL as a document database and event store.
+    builder.Services.AddMarten(opts =>
+    {
+        opts.Connection(builder.Configuration.GetConnectionString("Database")!);
+    }).UseLightweightSessions();
+
+    // Registers the CustomExceptionHandler to handle exceptions globally.
+    builder.Services.AddExceptionHandler<CustomExceptionHandler>();
+
+    // Configure health checks with PostgreSQL connection
+    builder.Services.AddHealthChecks()
+        .AddNpgSql(builder.Configuration.GetConnectionString("Database")!);
+}
+
+void ConfigureMiddleware(WebApplication app)
+{
+    // Configure middleware for development environment
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+
+    // Configure the HTTP request pipeline
+    // Map Carter endpoints for minimal APIs
+    app.MapCarter();
+
+    // Use custom exception handler middleware
+    // This will handle exceptions thrown during request processing.
+    app.UseExceptionHandler(options => { });
+
+    // Configure health check endpoint with a custom response writer
+    app.UseHealthChecks("/health",
+        new HealthCheckOptions
+        {
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
+}
