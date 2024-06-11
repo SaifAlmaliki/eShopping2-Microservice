@@ -1,5 +1,4 @@
-﻿
-namespace Catalog.API.Products.GetProducts;
+﻿namespace Catalog.API.Products.GetProducts;
 
 // Define a query model to specify pagination parameters for retrieving products
 public record GetProductsQuery(int? PageNumber = 1, int? PageSize = 10) : IQuery<GetProductsResult>;
@@ -8,16 +7,9 @@ public record GetProductsQuery(int? PageNumber = 1, int? PageSize = 10) : IQuery
 public record GetProductsResult(IEnumerable<Product> Products);
 
 // Define a query handler to process the GetProductsQuery
-internal class GetProductsQueryHandler : IQueryHandler<GetProductsQuery, GetProductsResult>
+// Uses a primary constructor to inject the IDocumentSession dependency
+internal class GetProductsQueryHandler(IDocumentSession session) : IQueryHandler<GetProductsQuery, GetProductsResult>
 {
-    private readonly IDocumentSession _session;
-
-    // Constructor to initialize the session and logger
-    public GetProductsQueryHandler(IDocumentSession session)
-    {
-        _session = session ?? throw new ArgumentNullException(nameof(session));
-    }
-
     // Handle method to process the query and return the result
     public async Task<GetProductsResult> Handle(GetProductsQuery query, CancellationToken cancellationToken)
     {
@@ -25,7 +17,7 @@ internal class GetProductsQueryHandler : IQueryHandler<GetProductsQuery, GetProd
         var pageSize = query.PageSize ?? 10;
 
         // Retrieve the list of products from the database
-        var products = await _session.Query<Product>()
+        var products = await session.Query<Product>()
             .ToPagedListAsync(pageNumber, pageSize, cancellationToken);
 
         // Return the result with the list of products

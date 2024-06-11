@@ -7,21 +7,15 @@ public record GetProductByCategoryQuery(string Category) : IQuery<GetProductByCa
 public record GetProductByCategoryResult(IEnumerable<Product> Products);
 
 // Handler class for processing the GetProductByCategoryQuery
-public class GetProductByCategoryQueryHandler : IQueryHandler<GetProductByCategoryQuery, GetProductByCategoryResult>
+// Uses a primary constructor to inject the IDocumentSession dependency
+internal class GetProductByCategoryQueryHandler(IDocumentSession session) : IQueryHandler<GetProductByCategoryQuery, GetProductByCategoryResult>
 {
-    private readonly IDocumentSession _session;
-
-    // Constructor with dependency injection
-    public GetProductByCategoryQueryHandler(IDocumentSession session)
-    {
-        _session = session;
-    }
 
     // Method to handle the query
     public async Task<GetProductByCategoryResult> Handle(GetProductByCategoryQuery query, CancellationToken cancellationToken)
     {
         // Fetch products that match the category criteria
-        var products = await _session.Query<Product>()
+        var products = await session.Query<Product>()
             .Where(p => p.Category.Contains(query.Category))
             .ToListAsync(cancellationToken);
 

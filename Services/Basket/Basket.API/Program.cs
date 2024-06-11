@@ -1,46 +1,87 @@
 var builder = WebApplication.CreateBuilder(args);
 
-
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// Configure services
+ConfigureServices(builder);
 
 var app = builder.Build();
 
+// Configure middleware
+ConfigureMiddleware(app);
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
-
+// Run the application
 app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+void ConfigureServices(WebApplicationBuilder builder)
 {
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    // Add services to the container.
+    var assembly = typeof(Program).Assembly;
+
+    // Add Carter for minimal API routing
+    builder.Services.AddCarter();
+
+    // Add MediatR services from the assembly and register custom behaviors for validation and logging.
+    builder.Services.AddMediatR(config =>
+    {
+        config.RegisterServicesFromAssembly(assembly);
+        config.AddOpenBehavior(typeof(ValidationBehavior<,>));
+        config.AddOpenBehavior(typeof(LoggingBehavior<,>));
+    });
+
+    builder.Services.AddMarten(opts =>
+    {
+        // Set the connection string for Marten to connect to PostgreSQL.
+        opts.Connection(builder.Configuration.GetConnectionString("Database")!);
+
+        // Configure the schema mapping for the ShoppingCart entity.
+        // The Identity method is used to specify the property that will act as the unique identifier.
+        opts.Schema.For<ShoppingCart>().Identity(x => x.UserName);
+    }).UseLightweightSessions();
+
+
+    // Register the BasketRepository service
+    builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+
+    // Configure Redis caching
+    builder.Services.AddStackExchangeRedisCache(options =>
+    {
+        options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    });
+
+    // Register the custom exception handler
+    builder.Services.AddExceptionHandler<CustomExceptionHandler>();
+
+    // Add Swagger for API documentation
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+
+    // Configure health checks with PostgreSQL and Redis
+    builder.Services.AddHealthChecks()
+        .AddNpgSql(builder.Configuration.GetConnectionString("Database")!)
+        .AddRedis(builder.Configuration.GetConnectionString("Redis")!);
+}
+
+void ConfigureMiddleware(WebApplication app)
+{
+    // Configure middleware for development environment
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+
+    // Configure the HTTP request pipeline
+    app.UseHttpsRedirection();
+
+    // Map Carter endpoints for minimal APIs
+    app.MapCarter();
+
+    // Use custom exception handler middleware
+    app.UseExceptionHandler(options => { });
+
+    // Configure health check endpoint with a custom response writer
+    app.UseHealthChecks("/health",
+        new HealthCheckOptions
+        {
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
 }

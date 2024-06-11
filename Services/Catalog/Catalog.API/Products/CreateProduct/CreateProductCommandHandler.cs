@@ -20,16 +20,9 @@ public class CreateProductCommandValidator : AbstractValidator<CreateProductComm
 }
 
 // Command handler to process the CreateProductCommand
-internal class CreateProductCommandHandler : ICommandHandler<CreateProductCommand, CreateProductResult>
+// Uses a primary constructor to inject the IDocumentSession dependency
+internal class CreateProductCommandHandler(IDocumentSession session) : ICommandHandler<CreateProductCommand, CreateProductResult>
 {
-    private readonly IDocumentSession _session;
-
-    // Constructor to initialize the session
-    public CreateProductCommandHandler(IDocumentSession session)
-    {
-        _session = session ?? throw new ArgumentNullException(nameof(session));
-    }
-
     // Handle method to process the command and return the result
     public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
@@ -44,10 +37,10 @@ internal class CreateProductCommandHandler : ICommandHandler<CreateProductComman
         };
 
         // Save the product entity to the database
-        _session.Store(product);
-        await _session.SaveChangesAsync(cancellationToken);
+        session.Store(product);
+        await session.SaveChangesAsync(cancellationToken);
 
-            // Return the result containing the new product ID
+        // Return the result containing the new product ID
         return new CreateProductResult(product.Id);
     }
 }

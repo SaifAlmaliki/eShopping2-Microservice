@@ -22,21 +22,14 @@ public class UpdateProductCommandValidator : AbstractValidator<UpdateProductComm
 }
 
 // Handler class for processing the UpdateProductCommand
-internal class UpdateProductCommandHandler : ICommandHandler<UpdateProductCommand, UpdateProductResult>
+// Uses a primary constructor to inject the IDocumentSession dependency
+internal class UpdateProductCommandHandler(IDocumentSession session) : ICommandHandler<UpdateProductCommand, UpdateProductResult>
 {
-    private readonly IDocumentSession _session;
-
-    // Constructor with dependency injection
-    public UpdateProductCommandHandler(IDocumentSession session)
-    {
-        _session = session;
-    }
-
     // Method to handle the update command
     public async Task<UpdateProductResult> Handle(UpdateProductCommand command, CancellationToken cancellationToken)
     {
         // Load the product with the specified ID
-        var product = await _session.LoadAsync<Product>(command.Id, cancellationToken);
+        var product = await session.LoadAsync<Product>(command.Id, cancellationToken);
 
         if (product is null)
         {
@@ -51,10 +44,10 @@ internal class UpdateProductCommandHandler : ICommandHandler<UpdateProductComman
         product.Price = command.Price;
 
         // Update the product in the session
-        _session.Update(product);
+        session.Update(product);
 
         // Save changes to the data store
-        await _session.SaveChangesAsync(cancellationToken);
+        await session.SaveChangesAsync(cancellationToken);
 
         // Return success result
         return new UpdateProductResult(true);

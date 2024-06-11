@@ -14,25 +14,18 @@ public class DeleteProductCommandValidator : AbstractValidator<DeleteProductComm
     }
 }
 
-internal class DeleteProductCommandHandler : ICommandHandler<DeleteProductCommand, DeleteProductResult>
+// Handler class for processing the DeleteProductCommandHandler
+// Uses a primary constructor to inject the IDocumentSession dependency
+internal class DeleteProductCommandHandler(IDocumentSession session) : ICommandHandler<DeleteProductCommand, DeleteProductResult>
 {
-    private readonly IDocumentSession _session;
-
-    // Constructor with dependency injection
-    public DeleteProductCommandHandler(IDocumentSession session)
-    {
-        _session = session;
-    }
-
     // Method to handle the delete command
     public async Task<DeleteProductResult> Handle(DeleteProductCommand command, CancellationToken cancellationToken)
     {
-    
         // Delete the product with the specified ID
-        _session.Delete<Product>(command.Id);
+        session.Delete<Product>(command.Id);
 
         // Save changes to the data store
-        await _session.SaveChangesAsync(cancellationToken);
+        await session.SaveChangesAsync(cancellationToken);
 
         // Return success result
         return new DeleteProductResult(true);

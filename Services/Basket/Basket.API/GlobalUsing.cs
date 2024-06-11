@@ -1,0 +1,17 @@
+﻿global using Basket.API.Models;
+global using Carter;
+global using MediatR;
+global using Mapster;
+global using FluentValidation;
+global using Marten;
+global using Shared.CQRS;
+global using Basket.API.Data;
+global using Shared.Behaviors;
+global using Microsoft.Extensions.Caching.Distributed;
+global using System.Text.Json;
+global using Shared.Exceptions;
+global using Basket.API.Exceptions;
+global using MassTransit;
+global using HealthChecks.UI.Client;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+global using Shared.Exceptions.Handler;
