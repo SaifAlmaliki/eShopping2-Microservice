@@ -7,8 +7,8 @@ services:
   basketdb:
     image: postgres
 
-#  distributedcache:
-#    image: redis
+  distributedcache:
+    image: redis
 
 #  orderdb:
 #    image: mcr.microsoft.com/mssql/server
@@ -35,11 +35,11 @@ services:
       context: .
       dockerfile: Services/Catalog/Catalog.API/Dockerfile
 
-#  basket.api:
-#    image: ${DOCKER_REGISTRY-}basketapi
-#    build:
-#      context: .
-#      dockerfile: Services/Basket/Basket.API/Dockerfile
+  basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
+    build:
+      context: .
+      dockerfile: Services/Basket/Basket.API/Dockerfile
 
 #  yarp.apigateway:
 #    image: ${DOCKER_REGISTRY-}yarpapigateway

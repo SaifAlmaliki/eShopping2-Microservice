@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E92F17F1-58CB-4396-896F-787FAC0CF9B3}|docker-compose.dcproj|c:\\users\\de121166\\desktop\\eshopping2\\docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E92F17F1-58CB-4396-896F-787FAC0CF9B3}|docker-compose.dcproj|solutionrelative:docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\basket\\basket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|solutionrelative:services\\basket\\basket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\basket\\basket.api\\data\\cashedbasketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|solutionrelative:services\\basket\\basket.api\\data\\cashedbasketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}|Shared\\Shared.csproj|c:\\users\\de121166\\desktop\\eshopping2\\shared\\cqrs\\iqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}|Shared\\Shared.csproj|solutionrelative:shared\\cqrs\\iqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}|Shared\\Shared.csproj|c:\\users\\de121166\\desktop\\eshopping2\\shared\\cqrs\\iquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}|Shared\\Shared.csproj|solutionrelative:shared\\cqrs\\iquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}|Shared\\Shared.csproj|c:\\users\\de121166\\desktop\\eshopping2\\shared\\cqrs\\icommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}|Shared\\Shared.csproj|solutionrelative:shared\\cqrs\\icommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}|Shared\\Shared.csproj|c:\\users\\de121166\\desktop\\eshopping2\\shared\\cqrs\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C2D971-AD1C-4C13-8783-C3765D5C58B7}|Shared\\Shared.csproj|solutionrelative:shared\\cqrs\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Program.cs",
-              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\Program.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Program.cs",
-              "RelativeToolTip": "Services\\Basket\\Basket.API\\Program.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAIwCoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:36:30.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CashedBasketRepository.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Data\\CashedBasketRepository.cs",
-              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\Data\\CashedBasketRepository.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Data\\CashedBasketRepository.cs",
-              "RelativeToolTip": "Services\\Basket\\Basket.API\\Data\\CashedBasketRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:24:34.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\CQRS\\IQueryHandler.cs",
-              "RelativeDocumentMoniker": "Shared\\CQRS\\IQueryHandler.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\CQRS\\IQueryHandler.cs",
-              "RelativeToolTip": "Shared\\CQRS\\IQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:21:07.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IQuery.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\CQRS\\IQuery.cs",
-              "RelativeDocumentMoniker": "Shared\\CQRS\\IQuery.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\CQRS\\IQuery.cs*",
-              "RelativeToolTip": "Shared\\CQRS\\IQuery.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:21:00.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ICommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\CQRS\\ICommandHandler.cs",
-              "RelativeDocumentMoniker": "Shared\\CQRS\\ICommandHandler.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\CQRS\\ICommandHandler.cs",
-              "RelativeToolTip": "Shared\\CQRS\\ICommandHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:20:47.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ICommand.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\CQRS\\ICommand.cs",
-              "RelativeDocumentMoniker": "Shared\\CQRS\\ICommand.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\CQRS\\ICommand.cs",
-              "RelativeToolTip": "Shared\\CQRS\\ICommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:20:31.327Z",
+              "Title": "docker-compose.override.yml",
+              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\docker-compose.override.yml",
+              "RelativeDocumentMoniker": "docker-compose.override.yml",
+              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\docker-compose.override.yml",
+              "RelativeToolTip": "docker-compose.override.yml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAFEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-06-15T14:38:04.157Z",
               "EditorCaption": ""
             },
             {
@@ -121,6 +40,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Program.cs",
+              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\Program.cs",
+              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Program.cs",
+              "RelativeToolTip": "Services\\Basket\\Basket.API\\Program.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAGQAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T14:30:13.099Z",
+              "EditorCaption": ""
             }
           ]
         }
