@@ -38,14 +38,27 @@ void ConfigureServices(WebApplicationBuilder builder)
     }).UseLightweightSessions();
 
 
-    // Register the BasketRepository service
+    // Register the BasketRepository service in the dependency injection container.
+    // This registers IBasketRepository with an implementation of BasketRepository.
+    // AddScoped means that a new instance of BasketRepository will be created
+    // for each client request (scope) to handle the basket operations.
     builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 
-    // Configure Redis caching
+    // Decorate the IBasketRepository service with CachedBasketRepository.
+    // This means that CachedBasketRepository will wrap the original BasketRepository.
+    // When IBasketRepository is requested, the DI container will inject CachedBasketRepository,
+    // which will in turn use BasketRepository for the core operations, adding caching behavior.
+    builder.Services.Decorate<IBasketRepository, CachedBasketRepository>();
+
+    // Configure Redis caching in the dependency injection container.
+    // AddStackExchangeRedisCache sets up Redis as the distributed cache for the application..
+    // The Configuration property is set to the connection string for Redis, which is retrieved
+    // from the application's configuration (e.g., appsettings.json or environment variables).
     builder.Services.AddStackExchangeRedisCache(options =>
     {
         options.Configuration = builder.Configuration.GetConnectionString("Redis");
     });
+
 
     // Register the custom exception handler
     builder.Services.AddExceptionHandler<CustomExceptionHandler>();

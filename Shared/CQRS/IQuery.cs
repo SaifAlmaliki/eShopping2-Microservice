@@ -1,5 +1,4 @@
 ﻿using MediatR;
-
 namespace Shared.CQRS;
 
 // Declaring a (generic interface) IQuery with an out parameter TResponse.

@@ -1,6 +1,4 @@
-﻿
-using MediatR;
-
+﻿using MediatR;
 namespace Shared.CQRS;
 
 // Declaring a generic interface ICommandHandler (with a single generic parameter) TCommand.

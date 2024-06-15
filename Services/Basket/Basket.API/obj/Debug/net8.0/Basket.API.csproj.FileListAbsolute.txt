@@ -198,3 +198,4 @@ C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0
 C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.dll
 C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\EventBus.Messages.pdb
 C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.pdb
+C:\Users\DE121166\Desktop\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Scrutor.dll

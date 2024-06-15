@@ -1,6 +1,4 @@
 ﻿using MediatR;
-
-
 namespace Shared.CQRS;
 
 // Declaring a (marker interface) ICommand that extends ICommand<Unit>.

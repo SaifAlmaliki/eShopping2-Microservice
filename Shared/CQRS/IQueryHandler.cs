@@ -1,6 +1,4 @@
 ﻿using MediatR;
-
-
 namespace Shared.CQRS
 {
     // Declaring a generic interface IQueryHandler which implements IRequestHandler from MediatR.
