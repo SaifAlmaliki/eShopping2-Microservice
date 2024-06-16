@@ -22,8 +22,10 @@ public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, 
 
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
+
         // Log the start of the request handling with detailed information
-        _logger.LogInformation("[START] Handling request={Request} - Response={Response} - RequestData={RequestData}",
+       _logger.LogInformation("-------------------------------------------------------------------------------------");
+       _logger.LogInformation("[START] Handling request={Request} - Response={Response} - RequestData={RequestData}",
             typeof(TRequest).Name, typeof(TResponse).Name, request);
 
         // Start a timer to measure the execution time of the request handling

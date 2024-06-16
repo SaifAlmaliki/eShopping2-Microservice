@@ -14,7 +14,10 @@ public static class Extentions
     // It ensures that the database schema is up-to-date.
     public static IApplicationBuilder UseMigration(this IApplicationBuilder app)
     {
-        // Creates a scope for the application's services.
+        // Creates a new scope for the application's services.
+        // This scope is used to resolve scoped services from the application's dependency injection container.
+        // The use of a scope ensures that any services instantiated within this context are properly disposed of
+        // when the scope is closed, maintaining good resource management and preventing memory leaks.
         using var scope = app.ApplicationServices.CreateScope();
 
         // Resolves the ILogger<DiscountContext> service from the service provider for logging.
@@ -25,10 +28,13 @@ public static class Extentions
             // Logs the start of the migration process.
             logger.LogInformation("Starting database migration.");
 
-            // Resolves the DiscountContext service from the service provider.
+            // Gets the DiscountContext service from the service provider.
+            // By using 'using var', we ensure that this tool is cleaned up properly after we're done using it.
             using var dbContext = scope.ServiceProvider.GetRequiredService<DiscountContext>();
 
             // Applies any pending migrations for the context to the database asynchronously.
+            // ".MigrateAsync()" means it runs in the background without stopping the rest of the program. 
+            // ".Wait()" is used here to make sure this process finishes before moving on to the next step.
             dbContext.Database.MigrateAsync().Wait();
 
             // Logs the successful completion of the migration process.
