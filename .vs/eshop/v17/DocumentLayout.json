@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E92F17F1-58CB-4396-896F-787FAC0CF9B3}|docker-compose.dcproj|c:\\users\\de121166\\desktop\\eshopping2\\docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E92F17F1-58CB-4396-896F-787FAC0CF9B3}|docker-compose.dcproj|solutionrelative:docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{BC92A2E2-9211-434A-8465-52BCFD93A0CA}|Services\\Discount\\Discount.Grpc\\Discount.Grpc.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\discount\\discount.grpc\\data\\extentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC92A2E2-9211-434A-8465-52BCFD93A0CA}|Services\\Discount\\Discount.Grpc\\Discount.Grpc.csproj|solutionrelative:services\\discount\\discount.grpc\\data\\extentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\basket\\basket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|solutionrelative:services\\basket\\basket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC92A2E2-9211-434A-8465-52BCFD93A0CA}|Services\\Discount\\Discount.Grpc\\Discount.Grpc.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\discount\\discount.grpc\\data\\discountcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC92A2E2-9211-434A-8465-52BCFD93A0CA}|Services\\Discount\\Discount.Grpc\\Discount.Grpc.csproj|solutionrelative:services\\discount\\discount.grpc\\data\\discountcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,19 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "docker-compose.override.yml",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\docker-compose.override.yml",
-              "RelativeDocumentMoniker": "docker-compose.override.yml",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\docker-compose.override.yml",
-              "RelativeToolTip": "docker-compose.override.yml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAFEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-06-15T14:38:04.157Z",
+              "DocumentIndex": 1,
+              "Title": "DiscountContext.cs",
+              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Discount\\Discount.Grpc\\Data\\DiscountContext.cs",
+              "RelativeDocumentMoniker": "Services\\Discount\\Discount.Grpc\\Data\\DiscountContext.cs",
+              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Discount\\Discount.Grpc\\Data\\DiscountContext.cs*",
+              "RelativeToolTip": "Services\\Discount\\Discount.Grpc\\Data\\DiscountContext.cs*",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA4AAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T13:17:41.507Z",
               "EditorCaption": ""
             },
             {
@@ -43,15 +43,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Program.cs",
-              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\Program.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Program.cs",
-              "RelativeToolTip": "Services\\Basket\\Basket.API\\Program.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAGQAAABOAAAA",
+              "DocumentIndex": 0,
+              "Title": "Extentions.cs",
+              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Discount\\Discount.Grpc\\Data\\Extentions.cs",
+              "RelativeDocumentMoniker": "Services\\Discount\\Discount.Grpc\\Data\\Extentions.cs",
+              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Discount\\Discount.Grpc\\Data\\Extentions.cs*",
+              "RelativeToolTip": "Services\\Discount\\Discount.Grpc\\Data\\Extentions.cs*",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T14:30:13.099Z",
+              "WhenOpened": "2024-06-16T13:16:27.175Z",
               "EditorCaption": ""
             }
           ]

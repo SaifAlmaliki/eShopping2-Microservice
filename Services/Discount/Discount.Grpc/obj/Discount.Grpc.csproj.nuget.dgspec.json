@@ -48,7 +48,7 @@
           "dependencies": {
             "Grpc.AspNetCore": {
               "target": "Package",
-              "version": "[2.57.0, )"
+              "version": "[2.63.0, )"
             },
             "Mapster": {
               "target": "Package",

@@ -1,0 +1,55 @@
+syntax = "proto3"; // Specifies the version of the Protocol Buffers language
+
+// Sets the namespace for the generated C# code to "Discount.Grpc"
+option csharp_namespace = "Discount.Grpc";
+
+// Defines the package name for the protobuf messages
+package discount;
+
+// The discount service definition which has 4 methods
+service DiscountProtoService {
+    // RPC method for retrieving a discount
+    rpc GetDiscount (GetDiscountRequest) returns (CouponModel);
+
+    // RPC method for creating a new discount
+    rpc CreateDiscount (CreateDiscountRequest) returns (CouponModel);
+
+    // RPC method for updating an existing discount
+    rpc UpdateDiscount (UpdateDiscountRequest) returns (CouponModel);
+
+    // RPC method for deleting a discount
+    rpc DeleteDiscount (DeleteDiscountRequest) returns (DeleteDiscountResponse);
+}
+
+// Message definition for the GetDiscount request
+message GetDiscountRequest {
+    string productName = 1; // The name of the product to get the discount for
+}
+
+// Message definition for the Coupon model
+message CouponModel {
+    int32 id = 1;           // Unique identifier for the coupon
+    string productName = 2; // Name of the product that the coupon applies to
+    string description = 3; // Description of the coupon
+    int32 amount = 4;       // Discount amount provided by the coupon
+}
+
+// Message definition for the CreateDiscount request
+message CreateDiscountRequest {
+    CouponModel coupon = 1; // The coupon to be created
+}
+
+// Message definition for the UpdateDiscount request
+message UpdateDiscountRequest {
+    CouponModel coupon = 1; // The coupon to be updated
+}
+
+// Message definition for the DeleteDiscount request
+message DeleteDiscountRequest {
+    string productName = 1; // The name of the product to delete the discount for
+}
+
+// Message definition for the DeleteDiscount response
+message DeleteDiscountResponse {
+    bool success = 1; // Indicates whether the deletion was successful
+}
