@@ -18,7 +18,6 @@ app.UseMigration();
 app.MapGrpcService<DiscountService>();
 
 app.MapGet("/", () =>
-    // Maps a GET request to the root URL to return a message about gRPC communication
     "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909"
 );
 
