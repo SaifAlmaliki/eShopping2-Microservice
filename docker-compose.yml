@@ -17,11 +17,11 @@ services:
 #    image: rabbitmq:management
 
   
-#  discount.grpc:
-#    image: ${DOCKER_REGISTRY-}discountgrpc
-#    build:
-#      context: .
-#      dockerfile: Services/Discount/Discount.Grpc/Dockerfile
+  discount.grpc:
+    image: ${DOCKER_REGISTRY-}discountgrpc
+    build:
+      context: .
+      dockerfile: Services/Discount/Discount.Grpc/Dockerfile
 
 #  ordering.api:
 #    image: ${DOCKER_REGISTRY-}orderingapi

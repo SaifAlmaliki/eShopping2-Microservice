@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure services
@@ -13,10 +15,8 @@ app.Run();
 
 void ConfigureServices(WebApplicationBuilder builder)
 {
-    // Add services to the container.
+    // Application Services.
     var assembly = typeof(Program).Assembly;
-
-    // Add Carter for minimal API routing
     builder.Services.AddCarter();
 
     // Add MediatR services from the assembly and register custom behaviors for validation and logging.
@@ -27,6 +27,7 @@ void ConfigureServices(WebApplicationBuilder builder)
         config.AddOpenBehavior(typeof(LoggingBehavior<,>));
     });
 
+    // Data Services
     builder.Services.AddMarten(opts =>
     {
         // Set the connection string for Marten to connect to PostgreSQL.
@@ -57,6 +58,12 @@ void ConfigureServices(WebApplicationBuilder builder)
     builder.Services.AddStackExchangeRedisCache(options =>
     {
         options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    });
+
+    // Grpc Services
+    builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options =>
+    {
+        options.Address = new Uri(builder.Configuration["GrpcSettings:DiscountUrl"]!);
     });
 
 

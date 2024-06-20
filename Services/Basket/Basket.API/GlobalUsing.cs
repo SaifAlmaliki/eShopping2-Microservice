@@ -15,3 +15,4 @@ global using MassTransit;
 global using HealthChecks.UI.Client;
 global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 global using Shared.Exceptions.Handler;
+global using Discount.Grpc;

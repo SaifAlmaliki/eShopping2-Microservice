@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC92A2E2-9211-434A-8465-52BCFD93A0CA}|Services\\Discount\\Discount.Grpc\\Discount.Grpc.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\discount\\discount.grpc\\services\\discountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC92A2E2-9211-434A-8465-52BCFD93A0CA}|Services\\Discount\\Discount.Grpc\\Discount.Grpc.csproj|solutionrelative:services\\discount\\discount.grpc\\services\\discountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\basket\\basket.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|solutionrelative:services\\basket\\basket.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC92A2E2-9211-434A-8465-52BCFD93A0CA}|Services\\Discount\\Discount.Grpc\\Discount.Grpc.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\discount\\discount.grpc\\protos\\discount.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{BC92A2E2-9211-434A-8465-52BCFD93A0CA}|Services\\Discount\\Discount.Grpc\\Discount.Grpc.csproj|solutionrelative:services\\discount\\discount.grpc\\protos\\discount.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|c:\\users\\de121166\\desktop\\eshopping2\\services\\basket\\basket.api\\basket\\storebasket\\storebasketcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|solutionrelative:services\\basket\\basket.api\\basket\\storebasket\\storebasketcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "discount.proto",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Discount\\Discount.Grpc\\Protos\\discount.proto",
-              "RelativeDocumentMoniker": "Services\\Discount\\Discount.Grpc\\Protos\\discount.proto",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Discount\\Discount.Grpc\\Protos\\discount.proto",
-              "RelativeToolTip": "Services\\Discount\\Discount.Grpc\\Protos\\discount.proto",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
-              "WhenOpened": "2024-06-19T19:53:11.499Z",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Dockerfile",
+              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\Dockerfile",
+              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Dockerfile",
+              "RelativeToolTip": "Services\\Basket\\Basket.API\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-20T14:52:53.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DiscountService.cs",
-              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Discount\\Discount.Grpc\\Services\\DiscountService.cs",
-              "RelativeDocumentMoniker": "Services\\Discount\\Discount.Grpc\\Services\\DiscountService.cs",
-              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Discount\\Discount.Grpc\\Services\\DiscountService.cs",
-              "RelativeToolTip": "Services\\Discount\\Discount.Grpc\\Services\\DiscountService.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAuwFAAAAAEAAAA",
+              "DocumentIndex": 1,
+              "Title": "StoreBasketCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Basket\\StoreBasket\\StoreBasketCommandHandler.cs",
+              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\Basket\\StoreBasket\\StoreBasketCommandHandler.cs",
+              "ToolTip": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Basket\\Basket.API\\Basket\\StoreBasket\\StoreBasketCommandHandler.cs",
+              "RelativeToolTip": "Services\\Basket\\Basket.API\\Basket\\StoreBasket\\StoreBasketCommandHandler.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwBwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T19:41:17.281Z",
+              "WhenOpened": "2024-06-20T14:46:09.38Z",
               "EditorCaption": ""
             }
           ]
