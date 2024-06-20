@@ -1,5 +1,3 @@
-using Microsoft.Extensions.Options;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure services
@@ -60,11 +58,31 @@ void ConfigureServices(WebApplicationBuilder builder)
         options.Configuration = builder.Configuration.GetConnectionString("Redis");
     });
 
-    // Grpc Services
+    // Register and configure the gRPC client service for the DiscountProtoService
     builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options =>
     {
+        // Set the address for the gRPC service by reading it from the configuration settings
         options.Address = new Uri(builder.Configuration["GrpcSettings:DiscountUrl"]!);
+    })
+    .ConfigurePrimaryHttpMessageHandler(() =>
+    {
+        // Create a new HttpClientHandler to manage HTTP message handling
+        var handler = new HttpClientHandler
+        {
+            // Set a custom validation callback to accept any server certificate
+            // This is potentially dangerous as it skips SSL certificate validation
+            // between basket and discount serrvices, making the application vulnerable
+            // to man-in-the-middle attacks.
+            // This should only be used in development environments or when you
+            // have a specific reason to trust the server certificate.
+            ServerCertificateCustomValidationCallback =
+            HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+        };
+
+        // Return the configured HttpClientHandler (SSL verification skipped between services)
+        return handler;
     });
+
 
 
     // Register the custom exception handler
