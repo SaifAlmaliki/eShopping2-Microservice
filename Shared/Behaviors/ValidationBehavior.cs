@@ -8,8 +8,7 @@ namespace Shared.Behaviors;
  * It uses the FluentValidation library to perform this validation. 
  * If any validation errors are found, it throws a ValidationException with details of the failures, 
  * thereby preventing the request from being processed further.
- * 
- * */
+ */
 public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : ICommand<TResponse>
 {
