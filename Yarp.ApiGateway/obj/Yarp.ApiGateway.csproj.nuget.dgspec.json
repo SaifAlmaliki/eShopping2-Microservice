@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj": {}
+    "C:\\Dev\\eShopping2\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj": {
+    "C:\\Dev\\eShopping2\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj",
+        "projectUniqueName": "C:\\Dev\\eShopping2\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj",
         "projectName": "Yarp.ApiGateway",
-        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj",
+        "projectPath": "C:\\Dev\\eShopping2\\Yarp.ApiGateway\\Yarp.ApiGateway.csproj",
         "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Yarp.ApiGateway\\obj\\",
+        "outputPath": "C:\\Dev\\eShopping2\\Yarp.ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",

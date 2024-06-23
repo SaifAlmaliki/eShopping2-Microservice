@@ -4911,11 +4911,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj",
       "projectName": "Ordering.Infrastructure",
-      "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj",
+      "projectPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\obj\\",
+      "outputPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4933,8 +4933,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj": {
-              "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj"
+            "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj": {
+              "projectPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj"
             }
           }
         }

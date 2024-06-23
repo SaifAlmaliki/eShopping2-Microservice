@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj": {}
+    "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj": {
+    "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj",
+        "projectUniqueName": "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj",
         "projectName": "EventBus.Messages",
-        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj",
+        "projectPath": "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj",
         "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\EventBus.Messages\\obj\\",
+        "outputPath": "C:\\Dev\\eShopping2\\EventBus.Messages\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj": {
+    "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj",
+        "projectUniqueName": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj",
         "projectName": "Ordering.Application",
-        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj",
+        "projectPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj",
         "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Application\\obj\\",
+        "outputPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,14 +96,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\DE121166\\Desktop\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj": {
-                "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj"
+              "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj": {
+                "projectPath": "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj"
               },
-              "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj": {
-                "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj"
+              "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj": {
+                "projectPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj"
               },
-              "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj"
+              "C:\\Dev\\eShopping2\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Dev\\eShopping2\\Shared\\Shared.csproj"
               }
             }
           }
@@ -142,14 +142,14 @@
         }
       }
     },
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj": {
+    "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
+        "projectUniqueName": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
         "projectName": "Ordering.Domain",
-        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
+        "projectPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
         "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Domain\\obj\\",
+        "outputPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -209,14 +209,14 @@
         }
       }
     },
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj": {
+    "C:\\Dev\\eShopping2\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Dev\\eShopping2\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Dev\\eShopping2\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\obj\\",
+        "outputPath": "C:\\Dev\\eShopping2\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",

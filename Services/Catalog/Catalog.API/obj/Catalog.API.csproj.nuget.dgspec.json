@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj": {}
+    "C:\\Dev\\eShopping2\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj": {
+    "C:\\Dev\\eShopping2\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
+        "projectUniqueName": "C:\\Dev\\eShopping2\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
         "projectName": "Catalog.API",
-        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
+        "projectPath": "C:\\Dev\\eShopping2\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
         "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Catalog\\Catalog.API\\obj\\",
+        "outputPath": "C:\\Dev\\eShopping2\\Services\\Catalog\\Catalog.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj"
+              "C:\\Dev\\eShopping2\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Dev\\eShopping2\\Shared\\Shared.csproj"
               }
             }
           }
@@ -102,14 +102,14 @@
         }
       }
     },
-    "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj": {
+    "C:\\Dev\\eShopping2\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Dev\\eShopping2\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Dev\\eShopping2\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Shared\\obj\\",
+        "outputPath": "C:\\Dev\\eShopping2\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",

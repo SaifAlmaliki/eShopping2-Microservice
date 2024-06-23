@@ -126,11 +126,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
+      "projectUniqueName": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
       "projectName": "Ordering.Domain",
-      "projectPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
+      "projectPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
       "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DE121166\\Desktop\\eShopping2\\Services\\Ordering\\Ordering.Domain\\obj\\",
+      "outputPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
