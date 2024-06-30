@@ -1,16 +1,13 @@
 ﻿// Purpose: Defines a domain event, which is a notification about something that has happened in the domain.
 // Domain events capture changes or significant occurrences within the domain.
-
-using MediatR;
-
 namespace Ordering.Domain.Abstractions;
 
 // Class representing a domain event.
 // Implements INotification to work with MediatR, a library for handling in-process messaging.
-public class IDomainEvent : INotification
+public interface IDomainEvent : INotification
 {
     // Generate a new unique identifier for each event.
-    Guid EventId = Guid.NewGuid();
+    Guid EventId => Guid.NewGuid();
 
     // Property to get the current UTC date and time when the event occurred.
     public DateTime OccuredOn => DateTime.UtcNow;

@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Dev\\eShopping2\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{93045940-40EC-41E5-B293-6267637D5704}|Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.domain\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93045940-40EC-41E5-B293-6267637D5704}|Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj|solutionrelative:services\\ordering\\ordering.domain\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Domain\\Models\\Order.cs",
+              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Models\\Order.cs",
+              "RelativeToolTip": "Services\\Ordering\\Ordering.Domain\\Models\\Order.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAArwGgAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T11:10:14.711Z",
+              "EditorCaption": ""
             }
           ]
         }

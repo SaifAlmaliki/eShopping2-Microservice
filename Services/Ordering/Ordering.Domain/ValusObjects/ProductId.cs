@@ -1,5 +1,4 @@
 ﻿// Purpose: Defines a strongly typed value object for ProductId to avoid mistakes and ensure consistency.
-
 namespace Ordering.Domain.ValueObjects;
 
 // Record representing a strongly typed ProductId.
