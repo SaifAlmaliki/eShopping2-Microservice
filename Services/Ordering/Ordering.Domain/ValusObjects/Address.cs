@@ -6,26 +6,12 @@ namespace Ordering.Domain.ValueObjects;
 // Records provide built-in functionality for value equality, meaning two Address instances with the same values are considered equal.
 public record Address
 {
-    // Property to hold the first name of the individual.
     public string FirstName { get; } = default!;
-
-    // Property to hold the last name of the individual.
     public string LastName { get; } = default!;
-
-    // Property to hold the email address of the individual.
-    // Nullable to allow for cases where an email address might not be provided.
     public string? EmailAddress { get; } = default!;
-
-    // Property to hold the address line (e.g., street address).
     public string AddressLine { get; } = default!;
-
-    // Property to hold the country of the address.
     public string Country { get; } = default!;
-
-    // Property to hold the state or province of the address.
     public string State { get; } = default!;
-
-    // Property to hold the zip or postal code of the address.
     public string ZipCode { get; } = default!;
 
     // Protected parameterless constructor for ORM tools or serialization purposes.

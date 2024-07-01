@@ -7,24 +7,11 @@ public class Order : Aggregate<OrderId>
 
     // A public property to provide read-only access to the order items.
     public IReadOnlyList<OrderItem> OrderItems => _orderItems.AsReadOnly();
-
-    // Property to store the customer ID associated with the order.
-    // 'private set' means this property can only be set within this class.
     public CustomerId CustomerId { get; private set; } = default!;
-
-    // Property to store the name of the order.
     public OrderName OrderName { get; private set; } = default!;
-
-    // Property to store the shipping address of the order.
     public Address ShippingAddress { get; private set; } = default!;
-
-    // Property to store the billing address of the order.
     public Address BillingAddress { get; private set; } = default!;
-
-    // Property to store the payment details of the order.
     public Payment Payment { get; private set; } = default!;
-
-    // Property to store the status of the order. It defaults to 'Pending'.
     public OrderStatus Status { get; private set; } = OrderStatus.Pending;
 
     // Property to calculate and get the total price of the order.

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Dev\\eShopping2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93045940-40EC-41E5-B293-6267637D5704}|Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.domain\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93045940-40EC-41E5-B293-6267637D5704}|Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj|solutionrelative:services\\ordering\\ordering.domain\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.infrastructure\\data\\migrations\\20240701163611_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|solutionrelative:services\\ordering\\ordering.infrastructure\\data\\migrations\\20240701163611_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Domain\\Models\\Order.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Models\\Order.cs",
-              "RelativeToolTip": "Services\\Ordering\\Ordering.Domain\\Models\\Order.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAArwGgAAAADAAAA",
+              "Title": "20240701163611_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Data\\Migrations\\20240701163611_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Infrastructure\\Data\\Migrations\\20240701163611_InitialCreate.cs",
+              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Data\\Migrations\\20240701163611_InitialCreate.cs",
+              "RelativeToolTip": "Services\\Ordering\\Ordering.Infrastructure\\Data\\Migrations\\20240701163611_InitialCreate.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAQwG0AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T11:10:14.711Z",
+              "WhenOpened": "2024-07-01T16:36:11.443Z",
               "EditorCaption": ""
             }
           ]
