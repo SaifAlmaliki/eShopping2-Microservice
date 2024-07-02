@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Dev\\eShopping2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.infrastructure\\data\\migrations\\20240701163611_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|solutionrelative:services\\ordering\\ordering.infrastructure\\data\\migrations\\20240701163611_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.infrastructure\\data\\interceptors\\dispatchdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|solutionrelative:services\\ordering\\ordering.infrastructure\\data\\interceptors\\dispatchdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.infrastructure\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|solutionrelative:services\\ordering\\ordering.infrastructure\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DispatchDomainEventsInterceptor.cs",
+              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs*",
+              "RelativeToolTip": "Services\\Ordering\\Ordering.Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T13:09:48.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GlobalUsing.cs",
+              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\GlobalUsing.cs",
+              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Infrastructure\\GlobalUsing.cs",
+              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\GlobalUsing.cs",
+              "RelativeToolTip": "Services\\Ordering\\Ordering.Infrastructure\\GlobalUsing.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T13:04:28.557Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
@@ -23,19 +53,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20240701163611_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Data\\Migrations\\20240701163611_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Infrastructure\\Data\\Migrations\\20240701163611_InitialCreate.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Data\\Migrations\\20240701163611_InitialCreate.cs",
-              "RelativeToolTip": "Services\\Ordering\\Ordering.Infrastructure\\Data\\Migrations\\20240701163611_InitialCreate.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAQwG0AAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T16:36:11.443Z",
-              "EditorCaption": ""
             }
           ]
         }

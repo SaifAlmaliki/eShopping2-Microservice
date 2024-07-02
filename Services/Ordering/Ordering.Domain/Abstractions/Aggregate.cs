@@ -6,7 +6,7 @@ public abstract class Aggregate<TId> : Entity<TId>, IAggregate<TId>
 {
     // List to store domain events associated with the aggregate.
     // Domain events are things that have happened in the past that you want other parts of the system to be aware of.
-    private readonly List<IDomainEvent> _domainEvents;
+    private readonly List<IDomainEvent> _domainEvents = new();
 
     // Provides read-only access to the domain events.
     // This ensures that the domain events can be read but not modified directly from outside the class.
