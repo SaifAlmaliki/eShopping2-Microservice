@@ -4,73 +4,6 @@
     "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj",
-        "projectName": "EventBus.Messages",
-        "projectPath": "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj",
-        "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\eShopping2\\EventBus.Messages\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "MassTransit.RabbitMQ": {
-              "target": "Package",
-              "version": "[8.2.2, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -96,11 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj": {
-                "projectPath": "C:\\Dev\\eShopping2\\EventBus.Messages\\EventBus.Messages.csproj"
-              },
               "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj": {
                 "projectPath": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj"
+              },
+              "C:\\Dev\\eShopping2\\Shared.Messaging\\Shared.Messaging\\Shared.Messaging.csproj": {
+                "projectPath": "C:\\Dev\\eShopping2\\Shared.Messaging\\Shared.Messaging\\Shared.Messaging.csproj"
               },
               "C:\\Dev\\eShopping2\\Shared\\Shared.csproj": {
                 "projectPath": "C:\\Dev\\eShopping2\\Shared\\Shared.csproj"
@@ -122,6 +55,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -264,6 +203,73 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dev\\eShopping2\\Shared.Messaging\\Shared.Messaging\\Shared.Messaging.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dev\\eShopping2\\Shared.Messaging\\Shared.Messaging\\Shared.Messaging.csproj",
+        "projectName": "Shared.Messaging",
+        "projectPath": "C:\\Dev\\eShopping2\\Shared.Messaging\\Shared.Messaging\\Shared.Messaging.csproj",
+        "packagesPath": "C:\\Users\\DE121166\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\eShopping2\\Shared.Messaging\\Shared.Messaging\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DE121166\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.2.3, )"
             }
           },
           "imports": [

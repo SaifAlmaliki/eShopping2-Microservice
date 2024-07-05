@@ -7,17 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\EventBus.Messages\EventBus.Messages.csproj" />
+    <ProjectReference Include="..\..\..\Shared.Messaging\Shared.Messaging\Shared.Messaging.csproj" />
     <ProjectReference Include="..\..\..\Shared\Shared.csproj" />
     <ProjectReference Include="..\Ordering.Domain\Ordering.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Dtos\" />
-    <Folder Include="Exceptions\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Orders\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
   </ItemGroup>
 
 </Project>
