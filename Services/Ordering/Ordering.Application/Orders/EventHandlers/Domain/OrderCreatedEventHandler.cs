@@ -1,17 +1,24 @@
 ﻿namespace Ordering.Application.Orders.EventHandlers.Domain;
 
+// The OrderCreatedEventHandler handles the OrderCreatedEvent
 public class OrderCreatedEventHandler
-    (IPublishEndpoint publishEndpoint, IFeatureManager featureManager, ILogger<OrderCreatedEventHandler> logger)
+    (IPublishEndpoint _publishEndpoint, IFeatureManager _featureManager, ILogger<OrderCreatedEventHandler> _logger)
     : INotificationHandler<OrderCreatedEvent>
 {
+    // Handles the OrderCreatedEvent
     public async Task Handle(OrderCreatedEvent domainEvent, CancellationToken cancellationToken)
     {
-        logger.LogInformation("Domain Event handled: {DomainEvent}", domainEvent.GetType().Name);
+        // Log information that the domain event has been handled
+        _logger.LogInformation("Domain Event handled: {DomainEvent}", domainEvent.GetType().Name);
 
-        if (await featureManager.IsEnabledAsync("OrderFullfilment"))
+        // Check if the "OrderFulfillment" feature is enabled
+        if (await _featureManager.IsEnabledAsync("OrderFullfilment"))
         {
+            // Convert the order from the domain event to an OrderDto
             var orderCreatedIntegrationEvent = domainEvent.order.ToOrderDto();
-            await publishEndpoint.Publish(orderCreatedIntegrationEvent, cancellationToken);
+
+            // Publish the integration event to the message bus
+            await _publishEndpoint.Publish(orderCreatedIntegrationEvent, cancellationToken);
         }
     }
 }

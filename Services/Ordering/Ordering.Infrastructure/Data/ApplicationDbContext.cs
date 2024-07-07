@@ -1,6 +1,7 @@
 ﻿namespace Ordering.Infrastructure.Data;
 
-public class ApplicationDbContext : DbContext
+// ApplicationDbContext provides the implementation for the database context
+public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
     // Constructor that takes DbContextOptions and passes it to the base DbContext class
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
@@ -29,6 +30,13 @@ public class ApplicationDbContext : DbContext
 }
 
 
-/* A DbSet: represents a collection of entities of a specific type that can be queried from the database and updated. 
+/* 
+ * A DbSet: represents a collection of entities of a specific type that can be queried from the database and updated. 
  * Set<Customer>() is a method provided by DbContext to get a DbSet for the specified entity type
+ */
+
+/*
+ * In a well-architected .NET application, having both an interface (IApplicationDbContext) in the (application project) 
+ * and its implementation (ApplicationDbContext) in the (infrastructure project) is a common pattern. 
+ * This pattern adheres to the principles of Clean Architecture and Separation of Concerns
  */
