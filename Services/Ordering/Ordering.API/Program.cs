@@ -21,7 +21,7 @@ app.UseApiServices();
 // Configure the HTTP request pipeline for development environment
 if (app.Environment.IsDevelopment())
 {
-    await app.InitialiseDatabaseAsync(); // Initialize and seed the database
+    await app.InitialiseDatabaseAsync(); // Initialize, Migrate and seed the database
     app.UseSwagger();   // Enable middleware to serve generated Swagger as a JSON endpoint
     app.UseSwaggerUI(); // Enable middleware to serve Swagger UI
 }

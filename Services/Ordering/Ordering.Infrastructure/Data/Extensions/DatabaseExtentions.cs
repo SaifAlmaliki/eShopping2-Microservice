@@ -1,6 +1,4 @@
 ﻿namespace Ordering.Infrastructure.Data.Extensions;
-
-// Static class to provide database-related extensions
 public static class DatabaseExtensions
 {
     // Extension method to initialize the database asynchronously

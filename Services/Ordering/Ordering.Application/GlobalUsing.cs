@@ -17,6 +17,7 @@ global using Microsoft.Extensions.Logging;
 global using Ordering.Domain.Events;
 global using Ordering.Application.Orders.Commands.CreateOrder;
 global using Shared.Messaging.Events;
+global using Shared.Messaging.MassTransit;
 global using Ordering.Application.Data;
 global using Ordering.Application.Extensions;
 global using Shared.Pagination;

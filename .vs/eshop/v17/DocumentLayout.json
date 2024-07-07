@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Dev\\eShopping2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.application\\orders\\queries\\getorderbycustomer\\getordersbycustomerquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|solutionrelative:services\\ordering\\ordering.application\\orders\\queries\\getorderbycustomer\\getordersbycustomerquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|solutionrelative:services\\ordering\\ordering.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.application\\orders\\queries\\getorderbycustomer\\getorderbycustomerqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|solutionrelative:services\\ordering\\ordering.application\\orders\\queries\\getorderbycustomer\\getorderbycustomerqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.application\\orders\\queries\\getorderbyname\\getordersbynamequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|solutionrelative:services\\ordering\\ordering.application\\orders\\queries\\getorderbyname\\getordersbynamequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.application\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|solutionrelative:services\\ordering\\ordering.application\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GetOrdersByCustomerQuery.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByCustomer\\GetOrdersByCustomerQuery.cs",
-              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByCustomer\\GetOrdersByCustomerQuery.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByCustomer\\GetOrdersByCustomerQuery.cs",
-              "RelativeToolTip": "Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByCustomer\\GetOrdersByCustomerQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T09:34:24.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GetOrderByCustomerQueryHandler.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByCustomer\\GetOrderByCustomerQueryHandler.cs",
-              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByCustomer\\GetOrderByCustomerQueryHandler.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByCustomer\\GetOrderByCustomerQueryHandler.cs",
-              "RelativeToolTip": "Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByCustomer\\GetOrderByCustomerQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABHAAAA",
+              "Title": "GlobalUsing.cs",
+              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\GlobalUsing.cs",
+              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Application\\GlobalUsing.cs",
+              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\GlobalUsing.cs",
+              "RelativeToolTip": "Services\\Ordering\\Ordering.Application\\GlobalUsing.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T09:33:46.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetOrdersByNameQueryHandler.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByName\\GetOrdersByNameQueryHandler.cs",
-              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByName\\GetOrdersByNameQueryHandler.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByName\\GetOrdersByNameQueryHandler.cs",
-              "RelativeToolTip": "Services\\Ordering\\Ordering.Application\\Orders\\Queries\\GetOrderByName\\GetOrdersByNameQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T09:22:40.606Z",
+              "WhenOpened": "2024-07-07T11:47:47.123Z",
               "EditorCaption": ""
             },
             {
@@ -70,6 +40,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Application\\DependencyInjection.cs",
+              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "Services\\Ordering\\Ordering.Application\\DependencyInjection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T11:30:19.827Z",
+              "EditorCaption": ""
             }
           ]
         }

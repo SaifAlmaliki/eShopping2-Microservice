@@ -13,8 +13,8 @@ services:
   orderdb:
     image: mcr.microsoft.com/mssql/server
 
-#  messagebroker:
-#    image: rabbitmq:management
+  messagebroker:
+    image: rabbitmq:management
 
   
   discount.grpc:
