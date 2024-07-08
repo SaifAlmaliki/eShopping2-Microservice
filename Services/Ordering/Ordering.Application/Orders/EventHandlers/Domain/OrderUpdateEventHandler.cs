@@ -4,7 +4,6 @@
 public class OrderUpdatedEventHandler
     (ILogger<OrderUpdatedEventHandler> _logger) : INotificationHandler<OrderUpdatedEvent>
 {
-    // Handles the OrderUpdatedEvent
     public Task Handle(OrderUpdatedEvent notification, CancellationToken cancellationToken)
     {
         // Log information that the domain event has been handled

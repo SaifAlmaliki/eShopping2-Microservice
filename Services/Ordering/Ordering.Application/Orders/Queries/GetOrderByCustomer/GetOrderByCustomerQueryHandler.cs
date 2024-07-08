@@ -1,10 +1,8 @@
 ﻿namespace Ordering.Application.Orders.Queries.GetOrderByCustomer;
 
 // The GetOrdersByCustomerQueryHandler handles the GetOrdersByCustomerQuery
-public class GetOrdersByCustomerQueryHandler(IApplicationDbContext _dbContext) 
-    : IQueryHandler<GetOrdersByCustomerQuery, GetOrdersByCustomerResult>
+public class GetOrdersByCustomerQueryHandler(IApplicationDbContext _dbContext) : IQueryHandler<GetOrdersByCustomerQuery, GetOrdersByCustomerResult>
 {
-    // Handles the GetOrdersByCustomerQuery
     public async Task<GetOrdersByCustomerResult> Handle(GetOrdersByCustomerQuery query, CancellationToken cancellationToken)
     {
         // Retrieve orders from the database context using the provided customer ID

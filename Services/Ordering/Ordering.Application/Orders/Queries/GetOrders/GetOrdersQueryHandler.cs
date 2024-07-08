@@ -3,7 +3,6 @@
 // The GetOrdersQueryHandler handles the GetOrdersQuery
 public class GetOrdersQueryHandler(IApplicationDbContext _dbContext) : IQueryHandler<GetOrdersQuery, GetOrdersResult>
 {
-    // Handles the GetOrdersQuery
     public async Task<GetOrdersResult> Handle(GetOrdersQuery query, CancellationToken cancellationToken)
     {
         // Extract pagination parameters from the query

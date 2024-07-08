@@ -3,7 +3,6 @@
 // The GetOrdersByNameQueryHandler handles the GetOrdersByNameQuery
 public class GetOrdersByNameQueryHandler(IApplicationDbContext _dbContext) : IQueryHandler<GetOrdersByNameQuery, GetOrdersByNameResult>
 {
-    // Handles the GetOrdersByNameQuery
     public async Task<GetOrdersByNameResult> Handle(GetOrdersByNameQuery query, CancellationToken cancellationToken)
     {
         // Retrieve orders from the database context using the provided name

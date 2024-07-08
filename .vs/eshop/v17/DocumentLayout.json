@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Dev\\eShopping2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|solutionrelative:services\\ordering\\ordering.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.application\\orders\\commands\\createorder\\createordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|solutionrelative:services\\ordering\\ordering.application\\orders\\commands\\createorder\\createordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.application\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEE2B35-7764-4780-A919-BF68E65CA317}|Services\\Ordering\\Ordering.Application\\Ordering.Application.csproj|solutionrelative:services\\ordering\\ordering.application\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.infrastructure\\data\\interceptors\\dispatchdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{383F0F98-0CA4-49B5-97DB-A0CE09C17832}|Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj|solutionrelative:services\\ordering\\ordering.infrastructure\\data\\interceptors\\dispatchdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,19 +21,6 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GlobalUsing.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\GlobalUsing.cs",
-              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Application\\GlobalUsing.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\GlobalUsing.cs",
-              "RelativeToolTip": "Services\\Ordering\\Ordering.Application\\GlobalUsing.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T11:47:47.123Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
@@ -43,15 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Application\\DependencyInjection.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\DependencyInjection.cs",
-              "RelativeToolTip": "Services\\Ordering\\Ordering.Application\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAALAAAA",
+              "DocumentIndex": 1,
+              "Title": "DispatchDomainEventsInterceptor.cs",
+              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "RelativeToolTip": "Services\\Ordering\\Ordering.Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAIA5wBQAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T11:30:19.827Z",
+              "WhenOpened": "2024-07-08T12:12:06.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateOrderCommandHandler.cs",
+              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Orders\\Commands\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.Application\\Orders\\Commands\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.Application\\Orders\\Commands\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "RelativeToolTip": "Services\\Ordering\\Ordering.Application\\Orders\\Commands\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T12:03:32.455Z",
               "EditorCaption": ""
             }
           ]

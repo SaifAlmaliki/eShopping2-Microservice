@@ -1,7 +1,7 @@
 ﻿namespace Ordering.Domain.Abstractions;
 
 // Generic abstract class representing an aggregate root.
-// TId is the type of the unique identifier for the aggregate (e.g., int, Guid, string).
+// TId: is the type of the unique identifier for the aggregate (e.g., int, Guid, string).
 public abstract class Aggregate<TId> : Entity<TId>, IAggregate<TId>
 {
     // List to store domain events associated with the aggregate.

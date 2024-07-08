@@ -3,7 +3,6 @@
 // The DeleteOrderHandler handles the DeleteOrderCommand
 public class DeleteOrderHandler(IApplicationDbContext dbContext) : ICommandHandler<DeleteOrderCommand, DeleteOrderResult>
 {
-    // Handles the DeleteOrderCommand
     public async Task<DeleteOrderResult> Handle(DeleteOrderCommand command, CancellationToken cancellationToken)
     {
         // Extract the Order ID from the command

@@ -1,10 +1,8 @@
 ﻿namespace Ordering.Application.Orders.Commands.CreateOrder;
 
 // The CreateOrderCommandHandler handles the CreateOrderCommand
-public class CreateOrderCommandHandler
-    (IApplicationDbContext dbContext) : ICommandHandler<CreateOrderCommand, CreateOrderResult>
+public class CreateOrderCommandHandler(IApplicationDbContext dbContext) : ICommandHandler<CreateOrderCommand, CreateOrderResult>
 {
-    // Handles the CreateOrderCommand
     public async Task<CreateOrderResult> Handle(CreateOrderCommand command, CancellationToken cancellationToken)
     {
         // Create a new Order entity from the command object

@@ -1,10 +1,8 @@
 ﻿namespace Ordering.Application.Orders.Commands.UpdateOrder;
 
 // The UpdateOrderCommandHandler handles the UpdateOrderCommand
-public class UpdateOrderCommandHandler
-    (IApplicationDbContext dbContext) : ICommandHandler<UpdateOrderCommand, UpdateOrderResult>
+public class UpdateOrderCommandHandler(IApplicationDbContext dbContext) : ICommandHandler<UpdateOrderCommand, UpdateOrderResult>
 {
-    // Handles the UpdateOrderCommand
     public async Task<UpdateOrderResult> Handle(UpdateOrderCommand command, CancellationToken cancellationToken)
     {
         // Extract the Order ID from the command

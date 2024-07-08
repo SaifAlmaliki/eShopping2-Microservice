@@ -21,8 +21,8 @@ public static class DependencyInjection
         // Add feature management services to the service collection
         services.AddFeatureManagement();
 
-        // Uncomment the following line to add message broker services
-        // services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
+        // add message broker services
+        services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
 
         // Return the updated service collection
         return services;
