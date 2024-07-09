@@ -1,6 +1,4 @@
-﻿// Purpose: Defines a strongly typed value object for Payment to encapsulate payment-related information and ensure consistency.
-
-namespace Ordering.Domain.ValueObjects;
+﻿namespace Ordering.Domain.ValueObjects;
 
 // Record representing a strongly typed Payment.
 // Records provide built-in functionality for value equality, meaning two Payment instances with the same values are considered equal.

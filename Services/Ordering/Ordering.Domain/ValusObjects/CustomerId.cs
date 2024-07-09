@@ -1,6 +1,4 @@
-﻿// Purpose: Defines a strongly typed value object for CustomerId to avoid mistakes and ensure consistency.
-
-namespace Ordering.Domain.ValueObjects;
+﻿namespace Ordering.Domain.ValueObjects;
 
 // Record representing a strongly typed CustomerId.
 // Records provide built-in functionality for value equality, meaning two CustomerId instances with the same value are considered equal.
@@ -14,7 +12,7 @@ public record CustomerId
     // This enforces control over the creation process, ensuring all CustomerId instances are valid.
     private CustomerId(Guid value) => Value = value;
 
-    // Static method to create a new instance of CustomerId.
+    // Of: Static method to create a new instance of CustomerId.
     // Ensures that the provided GUID is not null or empty, enforcing validity constraints.
     public static CustomerId Of(Guid value)
     {

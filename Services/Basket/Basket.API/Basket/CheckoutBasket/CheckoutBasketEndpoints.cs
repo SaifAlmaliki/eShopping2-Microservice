@@ -1,5 +1,5 @@
 ﻿namespace Basket.API.Basket.CheckoutBasket;
-/*
+
 // Define request and response records for the checkout basket operation.
 public record CheckoutBasketRequest(BasketCheckoutDto BasketCheckoutDto);
 public record CheckoutBasketResponse(bool IsSuccess);
@@ -34,4 +34,3 @@ public class CheckoutBasketEndpoints : ICarterModule
         return Results.Ok(response);
     }
 }
-*/

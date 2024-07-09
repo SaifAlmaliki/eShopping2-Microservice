@@ -1,6 +1,4 @@
-﻿// Purpose: Defines a strongly typed value object for Address to encapsulate address-related information and ensure consistency.
-
-namespace Ordering.Domain.ValueObjects;
+﻿namespace Ordering.Domain.ValueObjects;
 
 // Record representing a strongly typed Address.
 // Records provide built-in functionality for value equality, meaning two Address instances with the same values are considered equal.

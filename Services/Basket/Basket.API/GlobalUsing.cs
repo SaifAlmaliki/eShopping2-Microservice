@@ -16,3 +16,7 @@ global using HealthChecks.UI.Client;
 global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 global using Shared.Exceptions.Handler;
 global using Discount.Grpc;
+global using Basket.API.Dtos;
+global using Shared.Messaging.Events;
+global using System.Reflection;
+global using Shared.Messaging.MassTransit;

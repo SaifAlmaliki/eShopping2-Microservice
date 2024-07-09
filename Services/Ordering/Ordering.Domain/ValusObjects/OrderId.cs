@@ -1,6 +1,4 @@
-﻿// Purpose: Defines a strongly typed value object for OrderId to avoid mistakes and ensure consistency.
-
-namespace Ordering.Domain.ValueObjects;
+﻿namespace Ordering.Domain.ValueObjects;
 
 // Record representing a strongly typed OrderId.
 // Records provide built-in functionality for value equality.

@@ -400,3 +400,5 @@ C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\refint\Basket.API.
 C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\Basket.API.pdb
 C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\Basket.API.genruntimeconfig.cache
 C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\ref\Basket.API.dll
+C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.Messaging.dll
+C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.Messaging.pdb

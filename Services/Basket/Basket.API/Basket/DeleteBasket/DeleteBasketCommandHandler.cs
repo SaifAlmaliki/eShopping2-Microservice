@@ -1,5 +1,4 @@
-﻿// Define a namespace for the DeleteBasket feature within the Basket API.
-namespace Basket.API.Basket.DeleteBasket
+﻿namespace Basket.API.Basket.DeleteBasket
 {
     // Define a command record for deleting a basket, containing a single property UserName.
     public record DeleteBasketCommand(string UserName) : ICommand<DeleteBasketResult>;

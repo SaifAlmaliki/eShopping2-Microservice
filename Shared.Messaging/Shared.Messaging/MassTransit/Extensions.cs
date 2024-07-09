@@ -17,7 +17,7 @@ public static class Extentions
             config.SetKebabCaseEndpointNameFormatter();
 
             // If an assembly is provided, add consumers from that assembly
-            if (assembly != null)
+            if (assembly is not null)
                 config.AddConsumers(assembly);
 
             // Configuring MassTransit to use RabbitMQ

@@ -1,12 +1,20 @@
+using Basket.API;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure services
-ConfigureServices(builder);
+// ConfigureServices(builder);
+
+// Configure services by calling the extension method to keep the code modular and clean
+builder.Services.ConfigureServices(builder.Configuration, typeof(Program).Assembly);
 
 var app = builder.Build();
 
 // Configure middleware
-ConfigureMiddleware(app);
+// ConfigureMiddleware(app);
+
+// Configure middleware by calling the extension method
+app.ConfigureMiddleware();
 
 // Run the application
 app.Run();
@@ -83,7 +91,8 @@ void ConfigureServices(WebApplicationBuilder builder)
         return handler;
     });
 
-
+    //Async Communication Services
+    builder.Services.AddMessageBroker(builder.Configuration);
 
     // Register the custom exception handler
     builder.Services.AddExceptionHandler<CustomExceptionHandler>();

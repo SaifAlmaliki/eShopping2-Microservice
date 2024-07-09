@@ -1,6 +1,4 @@
-﻿// Purpose: Defines a strongly typed value object for OrderName to avoid mistakes and ensure consistency.
-
-namespace Ordering.Domain.ValueObjects;
+﻿namespace Ordering.Domain.ValueObjects;
 
 // Record representing a strongly typed OrderName.
 // Records provide built-in functionality for value equality, meaning two OrderName instances with the same value are considered equal.

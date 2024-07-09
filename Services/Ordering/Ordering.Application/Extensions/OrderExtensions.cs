@@ -3,7 +3,7 @@
 // The OrderExtensions class provides extension methods for converting Order entities to OrderDto objects
 public static class OrderExtensions
 {
-    // Converts an IEnumerable of Order entities to an IEnumerable of OrderDto objects
+    // ToOrderDtoList: Converts an IEnumerable of Order entities to an IEnumerable of OrderDto objects
     public static IEnumerable<OrderDto> ToOrderDtoList(this IEnumerable<Order> orders)
     {
         // Use LINQ to project each Order entity to an OrderDto object
@@ -46,7 +46,7 @@ public static class OrderExtensions
         ));
     }
 
-    // Converts a single Order entity to an OrderDto object
+    // ToOrderDto: Converts a single Order entity to an OrderDto object
     public static OrderDto ToOrderDto(this Order order)
     {
         return CreateOrderDto(order);
