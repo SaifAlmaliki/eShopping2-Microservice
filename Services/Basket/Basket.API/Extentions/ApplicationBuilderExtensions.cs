@@ -1,4 +1,4 @@
-﻿namespace Basket.API;
+﻿namespace Basket.API.Extentions;
 public static class ApplicationBuilderExtensions
 {
     // Extension method for WebApplication to configure middleware

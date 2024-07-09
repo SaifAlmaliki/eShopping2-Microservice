@@ -1,4 +1,4 @@
-﻿namespace Basket.API;
+﻿namespace Basket.API.Extentions;
 
 public static class ServiceCollectionExtensions
 {
@@ -41,10 +41,8 @@ public static class ServiceCollectionExtensions
         // which will in turn use BasketRepository for the core operations, adding caching behavior.
         services.Decorate<IBasketRepository, CachedBasketRepository>();
 
-        // Configure Redis caching in the dependency injection container.
+       
         // AddStackExchangeRedisCache sets up Redis as the distributed cache for the application..
-        // The Configuration property is set to the connection string for Redis, which is retrieved
-        // from the application's configuration (e.g., appsettings.json or environment variables).
         services.AddStackExchangeRedisCache(options =>
         {
             options.Configuration = configuration.GetConnectionString("Redis");

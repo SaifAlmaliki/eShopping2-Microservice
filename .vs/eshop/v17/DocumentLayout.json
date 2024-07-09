@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Dev\\eShopping2\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|c:\\dev\\eshopping2\\services\\basket\\basket.api\\basket\\checkoutbasket\\checkoutbasketcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|solutionrelative:services\\basket\\basket.api\\basket\\checkoutbasket\\checkoutbasketcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|c:\\dev\\eshopping2\\services\\basket\\basket.api\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|solutionrelative:services\\basket\\basket.api\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87A64D36-6FFD-42FE-84B1-6E9E4CC5EED7}|Services\\Ordering\\Ordering.API\\Ordering.API.csproj|c:\\dev\\eshopping2\\services\\ordering\\ordering.api\\endpoints\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87A64D36-6FFD-42FE-84B1-6E9E4CC5EED7}|Services\\Ordering\\Ordering.API\\Ordering.API.csproj|solutionrelative:services\\ordering\\ordering.api\\endpoints\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|c:\\dev\\eshopping2\\services\\basket\\basket.api\\basket\\getbasket\\getbasketendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|solutionrelative:services\\basket\\basket.api\\basket\\getbasket\\getbasketendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|c:\\dev\\eshopping2\\services\\basket\\basket.api\\basket\\deletebasket\\deletebasketcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2097DBDB-6E41-4E72-8953-6A0AB248D2E1}|Services\\Basket\\Basket.API\\Basket.API.csproj|solutionrelative:services\\basket\\basket.api\\basket\\deletebasket\\deletebasketcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,73 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GlobalUsing.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Basket\\Basket.API\\GlobalUsing.cs",
-              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\GlobalUsing.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Basket\\Basket.API\\GlobalUsing.cs",
-              "RelativeToolTip": "Services\\Basket\\Basket.API\\GlobalUsing.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T11:40:38.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateOrder.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.API\\Endpoints\\CreateOrder.cs",
-              "RelativeDocumentMoniker": "Services\\Ordering\\Ordering.API\\Endpoints\\CreateOrder.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Ordering\\Ordering.API\\Endpoints\\CreateOrder.cs",
-              "RelativeToolTip": "Services\\Ordering\\Ordering.API\\Endpoints\\CreateOrder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T11:36:48.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CheckoutBasketCommandHandler.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Basket\\Basket.API\\Basket\\CheckoutBasket\\CheckoutBasketCommandHandler.cs",
-              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\Basket\\CheckoutBasket\\CheckoutBasketCommandHandler.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Basket\\Basket.API\\Basket\\CheckoutBasket\\CheckoutBasketCommandHandler.cs",
-              "RelativeToolTip": "Services\\Basket\\Basket.API\\Basket\\CheckoutBasket\\CheckoutBasketCommandHandler.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwCkAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T11:22:39.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetBasketEndpoints.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Basket\\Basket.API\\Basket\\GetBasket\\GetBasketEndpoints.cs",
-              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\Basket\\GetBasket\\GetBasketEndpoints.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Basket\\Basket.API\\Basket\\GetBasket\\GetBasketEndpoints.cs",
-              "RelativeToolTip": "Services\\Basket\\Basket.API\\Basket\\GetBasket\\GetBasketEndpoints.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T11:22:18.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DeleteBasketCommandHandler.cs",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Services\\Basket\\Basket.API\\Basket\\DeleteBasket\\DeleteBasketCommandHandler.cs",
-              "RelativeDocumentMoniker": "Services\\Basket\\Basket.API\\Basket\\DeleteBasket\\DeleteBasketCommandHandler.cs",
-              "ToolTip": "C:\\Dev\\eShopping2\\Services\\Basket\\Basket.API\\Basket\\DeleteBasket\\DeleteBasketCommandHandler.cs*",
-              "RelativeToolTip": "Services\\Basket\\Basket.API\\Basket\\DeleteBasket\\DeleteBasketCommandHandler.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T11:22:07.318Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
