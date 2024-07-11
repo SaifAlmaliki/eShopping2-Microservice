@@ -2,8 +2,7 @@
 
 // Command representing a request to checkout a basket.
 // Contains a DTO with the necessary information for checkout.
-public record CheckoutBasketCommand(BasketCheckoutDto BasketCheckoutDto)
-    : ICommand<CheckoutBasketResult>;
+public record CheckoutBasketCommand(BasketCheckoutDto BasketCheckoutDto): ICommand<CheckoutBasketResult>;
 
 // Result of the CheckoutBasketCommand indicating success or failure.
 public record CheckoutBasketResult(bool IsSuccess);

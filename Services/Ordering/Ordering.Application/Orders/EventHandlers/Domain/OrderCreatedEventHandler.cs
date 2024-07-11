@@ -1,6 +1,6 @@
 ﻿namespace Ordering.Application.Orders.EventHandlers.Domain;
 
-// The OrderCreatedEventHandler handles the OrderCreatedEvent
+// The OrderCreatedEventHandler handles the OrderCreatedEvent from Ordering.Domain
 public class OrderCreatedEventHandler
     (IPublishEndpoint publishEndpoint, IFeatureManager featureManager, ILogger<OrderCreatedEventHandler> logger)
     : INotificationHandler<OrderCreatedEvent>
