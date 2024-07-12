@@ -1,9 +1,11 @@
 ﻿namespace Basket.API.Data;
 
 // Implementation of basket repository using IDocumentSession.
+// The BasketRepository class uses IDocumentSession to interact with NoSql database.
+// It represents a session for accessing and manipulating documents in the database.
+// A session provides functionalities such as querying, storing, and deleting documents.
 public class BasketRepository(IDocumentSession session) : IBasketRepository
 {
-
     // Method to delete a basket asynchronously.
     public async Task<bool> DeleteBasketAsync(string userName, CancellationToken cancellationToken = default)
     {

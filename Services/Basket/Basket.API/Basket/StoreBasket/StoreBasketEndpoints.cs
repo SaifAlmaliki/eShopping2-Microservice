@@ -22,7 +22,7 @@ public class StoreBasketEndpoints : ICarterModule
         // Adapt the request to a command.
         var command = request.Adapt<StoreBasketCommand>();
 
-        // Send the command using the sender and await the result.
+        // Send the command to the mediator using the ISender and await the result.
         var result = await sender.Send(command);
 
         // Adapt the result to a response.

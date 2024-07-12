@@ -1,9 +1,7 @@
 ﻿namespace Basket.API.Basket.StoreBasket;
 
-// Define a command record for storing a basket, using a primary constructor with a single property Cart.
+// Define a command and result records for storing a basket, using a primary constructor
 public record StoreBasketCommand(ShoppingCart Cart) : ICommand<StoreBasketResult>;
-
-// Define a result record for the store basket operation, using a primary constructor with a single property UserName.
 public record StoreBasketResult(string UserName);
 
 // Define a validator for the StoreBasketCommand using FluentValidation.

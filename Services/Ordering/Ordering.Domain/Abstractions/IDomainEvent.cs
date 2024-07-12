@@ -1,9 +1,6 @@
-﻿// Purpose: Defines a domain event, which is a notification about something that has happened in the domain.
-// Domain events capture changes or significant occurrences within the domain.
-namespace Ordering.Domain.Abstractions;
+﻿namespace Ordering.Domain.Abstractions;
 
-// Class representing a domain event.
-// Implements INotification to work with MediatR, a library for handling in-process messaging.
+// IDomainEvent class implements INotification to work with MediatR, a library for handling in-process messaging.
 public interface IDomainEvent : INotification
 {
     // Generate a new unique identifier for each event.
@@ -17,3 +14,9 @@ public interface IDomainEvent : INotification
     // This is useful for identifying the exact type of the event in a unique manner.
     public string EventType => GetType().AssemblyQualifiedName;
 }
+
+/* 
+* This class Defines a domain event, which is a notification about something that has happened in the domain.
+* Domain events capture changes or significant occurrences within the domain.
+*/
+

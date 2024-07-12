@@ -376,7 +376,9 @@ C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\zh-Hans\Microsoft.
 C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\EventBus.Messages.dll
 C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.dll
+C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.Messaging.dll
 C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\EventBus.Messages.pdb
+C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.Messaging.pdb
 C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.pdb
 C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\Basket.API.csproj.AssemblyReference.cache
 C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\Basket.API.GeneratedMSBuildEditorConfig.editorconfig
@@ -400,5 +402,3 @@ C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\refint\Basket.API.
 C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\Basket.API.pdb
 C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\Basket.API.genruntimeconfig.cache
 C:\Dev\eShopping2\Services\Basket\Basket.API\obj\Debug\net8.0\ref\Basket.API.dll
-C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.Messaging.dll
-C:\Dev\eShopping2\Services\Basket\Basket.API\bin\Debug\net8.0\Shared.Messaging.pdb

@@ -8,7 +8,6 @@ public record OrderName
     private const int DefaultLength = 5;
 
     // Property to hold the string value of the OrderName.
-    // This encapsulates the name of an order.
     public string Value { get; }
 
     // Private constructor to ensure OrderName can only be created through the static method.
