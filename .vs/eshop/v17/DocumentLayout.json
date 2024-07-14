@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Dev\\eShopping2\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{EA940535-90F7-440B-AD2F-053915A655F4}|Yarp.ApiGateway\\Yarp.ApiGateway.csproj|c:\\dev\\eshopping2\\yarp.apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EA940535-90F7-440B-AD2F-053915A655F4}|Yarp.ApiGateway\\Yarp.ApiGateway.csproj|solutionrelative:yarp.apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA940535-90F7-440B-AD2F-053915A655F4}|Yarp.ApiGateway\\Yarp.ApiGateway.csproj|c:\\dev\\eshopping2\\yarp.apigateway\\appsettings.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EA940535-90F7-440B-AD2F-053915A655F4}|Yarp.ApiGateway\\Yarp.ApiGateway.csproj|solutionrelative:yarp.apigateway\\appsettings.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,32 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.Local.json",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Yarp.ApiGateway\\appsettings.Local.json",
-              "RelativeDocumentMoniker": "Yarp.ApiGateway\\appsettings.Local.json",
-              "ToolTip": "C:\\Dev\\eShopping2\\Yarp.ApiGateway\\appsettings.Local.json",
-              "RelativeToolTip": "Yarp.ApiGateway\\appsettings.Local.json",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADYAAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-13T11:24:54.36Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Dev\\eShopping2\\Yarp.ApiGateway\\appsettings.json",
-              "RelativeDocumentMoniker": "Yarp.ApiGateway\\appsettings.json",
-              "ToolTip": "C:\\Dev\\eShopping2\\Yarp.ApiGateway\\appsettings.json",
-              "RelativeToolTip": "Yarp.ApiGateway\\appsettings.json",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAD0AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-13T11:01:20.51Z",
-              "EditorCaption": ""
             }
           ]
         }

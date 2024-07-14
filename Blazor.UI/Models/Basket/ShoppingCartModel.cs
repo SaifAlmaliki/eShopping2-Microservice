@@ -1,13 +1,12 @@
 ﻿namespace Blazor.UI.Models.Basket;
-
-public class ShoppingCartModel
+public record ShoppingCartModel
 {
     public string UserName { get; set; } = default!;
     public List<ShoppingCartItemModel> Items { get; set; } = new();
     public decimal TotalPrice => Items.Sum(x => x.Price * x.Quantity);
 }
 
-public class ShoppingCartItemModel
+public record ShoppingCartItemModel
 {
     public int Quantity { get; set; } = default!;
     public string Color { get; set; } = default!;

@@ -47,11 +47,11 @@ services:
       context: ..
       dockerfile: eShopping2/Yarp.ApiGateway/Dockerfile
 
-#  blazor.ui:
-#    image: ${DOCKER_REGISTRY-}blazorui
-#    build:
-#      context: ..
-#      dockerfile: eShopping2/Blazor.UI/Dockerfile
+  blazor.ui:
+    image: ${DOCKER_REGISTRY-}blazorui
+    build:
+      context: ..
+      dockerfile: eShopping2/Blazor.UI/Dockerfile
 
 volumes:
   postgres_catalog:
