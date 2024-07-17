@@ -39,7 +39,9 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{B9A7800D-1206-442C-9773-23E8F6524156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Messaging", "Shared.Messaging\Shared.Messaging\Shared.Messaging.csproj", "{75AE3DD5-E43E-48A6-88F5-CFBA7256870D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Messaging", "Shared.Messaging\Shared.Messaging\Shared.Messaging.csproj", "{75AE3DD5-E43E-48A6-88F5-CFBA7256870D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI", "Web.UI\Web.UI.csproj", "{2BBD2609-E910-4F8A-B001-561D1B81B754}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{75AE3DD5-E43E-48A6-88F5-CFBA7256870D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75AE3DD5-E43E-48A6-88F5-CFBA7256870D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75AE3DD5-E43E-48A6-88F5-CFBA7256870D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBD2609-E910-4F8A-B001-561D1B81B754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBD2609-E910-4F8A-B001-561D1B81B754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBD2609-E910-4F8A-B001-561D1B81B754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBD2609-E910-4F8A-B001-561D1B81B754}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

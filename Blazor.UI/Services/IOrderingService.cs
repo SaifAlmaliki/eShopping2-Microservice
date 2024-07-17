@@ -1,6 +1,4 @@
 ﻿namespace Blazor.UI.Services;
-
-// This interface, IOrderingService, specifies methods for fetching order data from an ordering service API.
 public interface IOrderingService
 {
     // Fetch paginated list of orders

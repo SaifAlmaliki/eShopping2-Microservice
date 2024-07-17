@@ -83,37 +83,45 @@
 
 @code {
 
-    private IEnumerable<ProductModel> ProductList { get; set; } = new List<ProductModel>();
-    
+    private IEnumerable<ProductModel>? ProductList { get; set; } = new List<ProductModel>();
+
     [Inject]
-    private NavigationManager NavigationManager { get; set; }
+    private NavigationManager NavigationManager { get; set; } = default!;
+
 
     protected override async Task OnInitializedAsync()
     {
-        Logger.LogInformation("Index page visited");
+        Logger.LogInformation("Index page visited by {User}", NavigationManager.Uri);
         var result = await CatalogService.GetProducts();
-        ProductList = result.Products;
+        ProductList = result?.Products ?? Enumerable.Empty<ProductModel>();
     }
 
     private async Task AddToCart(Guid productId)
     {
-        Logger.LogInformation("Add to cart button clicked");
+        Logger.LogInformation("Add to cart button clicked for product {ProductId}", productId);
 
         var productResponse = await CatalogService.GetProduct(productId);
         var basket = await BasketService.LoadUserBasket();
 
-        basket.Items.Add(new ShoppingCartItemModel
+        if (productResponse?.Product != null)
         {
-            ProductId = productId,
-            ProductName = productResponse.Product.Name,
-            Price = productResponse.Product.Price,
-            Quantity = 1,
-            Color = "Black"
-        });
+            basket.Items.Add(new ShoppingCartItemModel
+                {
+                    ProductId = productId,
+                    ProductName = productResponse.Product.Name,
+                    Price = productResponse.Product.Price,
+                    Quantity = 1,
+                    Color = "Black"
+                });
 
-        await BasketService.StoreBasket(new StoreBasketRequest(basket));
+            await BasketService.StoreBasket(new StoreBasketRequest(basket));
 
-        // Navigate to the cart page (update as per your routing)
-        NavigationManager.NavigateTo("cart");
+            // Navigate to the cart page
+            NavigationManager.NavigateTo("cart");
+        }
+        else
+        {
+            Logger.LogWarning("Product {ProductId} not found", productId);
+        }
     }
 }

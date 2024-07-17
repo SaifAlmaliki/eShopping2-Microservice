@@ -1,72 +1,52 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">BlazorApp1</a>
+        <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
     </div>
 </div>
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="index">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Index
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="cart">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> cart
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="confirmation">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> confirmation
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="contect">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> contect
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="checkout">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> checkout
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="orderlist">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> orderlist
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="products">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> products
-            </NavLink>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                            <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Index
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="cart">
+                            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Cart
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="confirmation">
+                            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Confirmation
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="contect">
+                            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Contact
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="checkout">
+                            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Checkout
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="orderlist">
+                            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Order List
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="products">
+                            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Products
+                        </NavLink>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </div>
-

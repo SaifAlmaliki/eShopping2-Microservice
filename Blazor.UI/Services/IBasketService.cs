@@ -1,11 +1,4 @@
-﻿// This file defines the IBasketService interface and its methods for interacting
-// with a basket service in a Blazor application. The service includes methods 
-// for getting, storing, deleting, and checking out a user's basket. Additionally, 
-// it provides a method for loading a user's basket, creating a new one if it does not exist.
-
-namespace Blazor.UI.Services;
-
-// Defines the contract for a basket service with methods for basket operations
+﻿namespace Blazor.UI.Services;
 public interface IBasketService
 {
     // Retrieves the basket for a given user by username
@@ -52,3 +45,10 @@ public interface IBasketService
         return basket;
     }
 }
+
+/* 
+* This file defines the IBasketService interface and its methods for interacting
+* with a basket service in a Blazor application. The service includes methods 
+* for getting, storing, deleting, and checking out a user's basket. Additionally, 
+* it provides a method for loading a user's basket, creating a new one if it does not exist.
+*/

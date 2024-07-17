@@ -6,16 +6,10 @@ namespace Blazor.UI.Models.Ordering;
 
 // Represents a paginated result set for a specific entity type
 // TEntity is a generic type parameter constrained to classes
-public class PaginatedResult<TEntity>(int pageIndex, int pageSize, long count, IEnumerable<TEntity> data)
-    where TEntity : class
+public class PaginatedResult<TEntity>(int pageIndex, int pageSize, long count, IEnumerable<TEntity> data) where TEntity : class
 {
-    // The current page index
     public int PageIndex { get; } = pageIndex;
-
-    // The size of each page
     public int PageSize { get; } = pageSize;
-
-    // The total count of items across all pages
     public long Count { get; } = count;
 
     // The data for the current page

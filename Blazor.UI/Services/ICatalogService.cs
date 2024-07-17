@@ -1,6 +1,4 @@
 ﻿namespace Blazor.UI.Services;
-
-// Interface for catalog service, providing methods to fetch products
 public interface ICatalogService
 {
     // Fetches a paginated list of products.
